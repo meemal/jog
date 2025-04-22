@@ -150,7 +150,8 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
                         <h3 class="text-[40px] leading-[55px] text-[#474341] md:text-[60px] font-artz mt-[10px] mb-4 "><?php the_title(); ?></h3>
                         <p class="text-[#474341] pb-[32px] lg:pb-[111px]  text-[22px] max-w-[420px] sm:max-w-[520px] md:max-w-full mb-[35px] md:text-[29px] leading-[32px] lg:leading-[42px]  md:mb-[119px]"><?php echo wp_trim_words(get_the_excerpt(), 17); ?></p>
                         <a href="<?php the_permalink(); ?>"
-                            class="group w-[40px] sm:w-[65px] h-[40px] sm:h-[65px] mt-4 bg-transparent rounded-full absolute right-8 bottom-[32px] lg:bottom-0 lg:mb-[44px] flex items-center justify-center transition-colors duration-300 hover:bg-[#bba89c]">
+                            class="group w-[40px] sm:w-[65px] h-[40px] sm:h-[65px] mt-4 bg-transparent rounded-full absolute right-8 bottom-[32px] lg:bottom-0 lg:mb-[44px] flex items-center justify-center transition-colors duration-300 hover:bg-[cd
+                            ]">
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" class="w-full h-full">
                                     <g id="Group_58" data-name="Group 58" transform="translate(-1793 -2835)">
