@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+@layer components {
+    .custom-btn {
+        @apply bg-red-500 text-white px-4 py-2 rounded;
+    }
+
+    /* .custom-logo-link {
+        @apply flex items-center justify-start;
+    } */
+
+    .custom-logo {
+      @apply block h-auto w-full max-w-full lg:w-auto lg:max-w-none;
+    }
+
+    .custom-line-height {
+        line-height: 2.5;
+      }
+
+      .container{
+        /* @apply w-full max-w-[100%] lg:max-w-[1280px] xl:max-w-[1790px] mx-auto px-[43px]; */
+        @apply max-w-full m-0 px-[10px] sm:px-[53px];
+    }
+
+    /* .frm_sixth {
+      @apply font-brother font-bold text-[#FFFFFF] bg-[#6da3c4] hover:bg-[#5c8bad] px-6 py-3 rounded-lg text-[146px] transition-all duration-300;
+    } */
+    
+      
+}
+
+/* ........................................................................................ */
+
+@layer base {
+    @font-face {
+        font-family: "HWT_Artz";
+        src: url("../fonts/HWTArtz.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* @font-face {
+        font-family: 'HWT_Artz_Regular';
+        src: url("../fonts/Brother-1816.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'HWT_Artz_light';
+        src: url("../fonts/Brother-1818-Light.woff") format('woff');
+        font-weight: normal;
+        font-style: normal;
+      } */
+
+     
+    
+}
+
+
+@layer utilities {
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    @media (min-width: 1310px) {
+        .custom-show-div {
+          display: block;
+        }
+      }
+
+    @media (min-width: 1300px) {
+        .custom-hide-btn {
+          display: none;
+        }
+    }
+
+  
+}
+
+
+

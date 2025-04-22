@@ -1,0 +1,59 @@
+==============================
+John Mill WordPress Theme – Styling Guide
+==============================
+
+This theme uses Tailwind CSS, but you can update styles in TWO ways depending on your technical comfort level.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPTION 1: EASY — Direct CSS Edits (NO Tailwind Required)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This method is perfect if you just want to change colors, fonts, spacing, etc. **without knowing Tailwind or using any tools.**
+
+ FILE TO EDIT:
+→ /wp-content/themes/john-mill/assets/css/output.css
+
+HOW TO EDIT:
+1. Login to your hosting panel
+2. Go to File Manager
+3. Navigate to: `wp-content/themes/john-mill/assets/css/`
+4. Right-click `output.css` → Click “Edit”
+5. Save and refresh your site
+
+EXAMPLE: Change Button Color or make new button class for any template file
+Find this or add new class in `output.css`:
+
+.my_button {
+  background-color: #3B82F6;
+}
+
+Now use this class (my_button) in your any template file.
+..........................................................................................................................
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ OPTION 2: ADVANCED — Use Tailwind Classes (Developer Workflow)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILES INCLUDED IN THIS THEME:
+1. tailwind.config.js
+2. postcss.config.js
+3. input.css
+4. output.css (auto-generated)
+5. package.json
+Note: Already satisfied those files in this theme, so no need to create it again
+
+HOW TO BUILD:
+1. Install Node.js → https://nodejs.org/
+2. Open the theme folder in your terminal
+Run:
+    npm install           # Run once
+    npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css --watch # [(--minify) in production level]
+
+EXAMPLE: Add this button code any template file
+
+<button class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+  Click Me
+</button>
+
+Then save and see the output.
+
