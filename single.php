@@ -91,11 +91,11 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook02.svg" alt="">
             </a>
 
-            <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>" 
+            <!-- <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>" 
             class="-ml-2 w-[65px] h-[65px] flex items-center justify-center rounded-full hover:bg-[#e2d6c5] transition-all duration-300" 
             target="_blank">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="">
-            </a>
+            </a> -->
 
             <a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>" 
             class="-ml-2 w-[65px] h-[65px] flex items-center justify-center rounded-full hover:bg-[#e2d6c5] transition-all duration-300">
