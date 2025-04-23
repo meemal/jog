@@ -39,7 +39,7 @@
 <header class="w-full container relative bg-[#FFFFFF] z-50 rounded-b-[40px]">
     <nav class=" pt-[35.8px] pb-[37.8px] md:pt-[30px] md:pb-[51px] flex justify-between  items-center">
         <!-- Dynamic Logo -->
-        <div class="flex max-w-[250px] sm:max-w-[366.02px]  lg:max-w-full items-center">
+        <div class="flex max-w-[250px] md:max-w-[366.02px]  lg:max-w-full items-center">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center">
                 <?php if (has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>

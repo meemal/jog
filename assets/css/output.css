@@ -2240,6 +2240,10 @@ video {
   background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:to-mill-red-high:hover {
+  --tw-gradient-to: #B81E26 var(--tw-gradient-to-position);
+}
+
 .hover\:text-\[\#9A0F1E\]:hover {
   --tw-text-opacity: 1;
   color: rgb(154 15 30 / var(--tw-text-opacity, 1));
@@ -2375,10 +2379,6 @@ video {
 
   .sm\:w-\[65px\] {
     width: 65px;
-  }
-
-  .sm\:max-w-\[366\.02px\] {
-    max-width: 366.02px;
   }
 
   .sm\:max-w-\[480px\] {
@@ -2557,6 +2557,10 @@ video {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:max-w-\[366\.02px\] {
+    max-width: 366.02px;
   }
 
   .md\:max-w-\[721px\] {

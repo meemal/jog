@@ -40,10 +40,11 @@
                                         $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
                                         ?>
                                         <?php if ($contact_url && $email) : ?>
-                                            <a href="<?php echo esc_url($contact_url); ?>" class="text-[#9a0f1e]">
-                                                <?php echo antispambot($email); ?>
+                                            <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:to-mill-red-high">
+                                                Contact Us
                                             </a>
                                         <?php endif; ?>
+                                    
                                     </p>
                                 </div>
                             </div>
@@ -129,8 +130,9 @@
                             $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
                             ?>
                             <?php if ($contact_url && $email) : ?>
-                                <a href="<?php echo esc_url($contact_url); ?>" target="_self" class="text-[#9a0f1e] text-[28px] leading-[34px]">
-                                    <?php echo antispambot($email); ?>
+                                <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:to-mill-red-high">
+                                                Contact Us
+                                           
                                 </a>
                             <?php endif; ?>
                         </p>

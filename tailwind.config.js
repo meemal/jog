@@ -14,6 +14,8 @@ module.exports = {
     extend: {
       colors: {
         'mill-red': '#9A0F1E',
+        'mill-red-high': '#B81E26',
+        'mill-blue': '#6899BF'
       },
       // fontFamily: {
       //   hwt: ["HWT_Artz", "sans-serif"],
