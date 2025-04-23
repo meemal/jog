@@ -2240,6 +2240,11 @@ video {
   background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-mill-blue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(104 153 191 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:to-mill-red-high:hover {
   --tw-gradient-to: #B81E26 var(--tw-gradient-to-position);
 }

@@ -149,28 +149,20 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
                         <span class="text-[22px] leading-[30px] text-[#474341] "><?php echo get_the_category_list(', '); ?></span>
                         <h3 class="text-[40px] leading-[55px] text-[#474341] md:text-[60px] font-artz mt-[10px] mb-4 "><?php the_title(); ?></h3>
                         <p class="text-[#474341] pb-[32px] lg:pb-[111px]  text-[22px] max-w-[420px] sm:max-w-[520px] md:max-w-full mb-[35px] md:text-[29px] leading-[32px] lg:leading-[42px]  md:mb-[119px]"><?php echo wp_trim_words(get_the_excerpt(), 17); ?></p>
-                        <a href="<?php the_permalink(); ?>"
-                            class="group w-[40px] sm:w-[65px] h-[40px] sm:h-[65px] mt-4 bg-transparent rounded-full absolute right-8 bottom-[32px] lg:bottom-0 lg:mb-[44px] flex items-center justify-center transition-colors duration-300 hover:bg-[cd
-                            ]">
+                        <a href="<?php the_permalink(); ?>" class="group w-[40px] sm:w-[65px] h-[40px] sm:h-[65px] mt-4 bg-transparent rounded-full absolute right-8 bottom-[32px] lg:bottom-0 lg:mb-[44px] flex items-center justify-center transition-colors duration-300 hover:bg-mill-blue">
                                 
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" class="w-full h-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" class="w-full h-full">
                                     <g id="Group_58" data-name="Group 58" transform="translate(-1793 -2835)">
                                         <!-- Circle border -->
-                                        <g id="Ellipse_12" data-name="Ellipse 12"
-                                        transform="translate(1793 2835)"
-                                        fill="none"
-                                        stroke="#787573"
-                                        stroke-width="3">
-                                            <circle cx="32.5" cy="32.5" r="32.5" stroke="none"/>
-                                            <circle cx="32.5" cy="32.5" r="31" fill="none"/>
+                                        <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(1793 2835)" fill="none" stroke="#787573" stroke-width="3">
+                                            <circle cx="32.5" cy="32.5" r="32.5" stroke="none"></circle>
+                                            <circle cx="32.5" cy="32.5" r="31" fill="none"></circle>
                                         </g>
                                         
                                         <!-- Arrow -->
                                         <g id="Group_56" data-name="Group 56" transform="translate(1850 2891) rotate(180)">
-                                            <path id="Path_37" d="M0,0H48V48H0Z" fill="none"/>
-                                            <path id="Path_38"
-                                                d="M40,22H15.66L26.83,10.83,24,8,8,24,24,40l2.83-2.83L15.66,26H40Z"
-                                                class="transition-colors duration-300 fill-[#787573] group-hover:fill-white"/>
+                                            <path id="Path_37" d="M0,0H48V48H0Z" fill="none"></path>
+                                            <path id="Path_38" d="M40,22H15.66L26.83,10.83,24,8,8,24,24,40l2.83-2.83L15.66,26H40Z" class="transition-colors duration-300 fill-[#787573] group-hover:fill-white"></path>
                                         </g>
                                     </g>
                                 </svg>
