@@ -39,7 +39,7 @@
 <header class="w-full container relative bg-[#FFFFFF] z-50 rounded-b-[40px]">
     <nav class=" pt-[35.8px] pb-[37.8px] md:pt-[30px] md:pb-[51px] flex justify-between  items-center">
         <!-- Dynamic Logo -->
-        <div class="flex max-w-[250px] md:max-w-[366.02px]  lg:max-w-full items-center">
+        <div class="flex items-center">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center">
                 <?php if (has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
@@ -51,32 +51,21 @@
 
         <!-- Navigation Menu -->
         <div class="custom-show-div hidden">
-    <?php
-    // wp_nav_menu(array(
-    //     'theme_location' => 'primary',
-    //     'container'      => false,
-    //     'menu_class'     => 'flex text-[28px] text-[#B0B2B4] list-none overflow-y-auto',
-    //     'fallback_cb'    => false,
-    //     'walker'         => new Custom_Walker_Nav_Menu() // Custom Walker Added
-    // ));
-    ?>
 
-    <div class="  whitespace-nowrap  flex pt-[13px]">
-        <nav class="flex  ">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container'      => false,
-                'menu_class'     => 'flex text-[28px] text-[#B0B2B4] list-none font-artz',
-                'fallback_cb'    => false,
-                'walker'         => new Custom_Walker_Nav_Menu()
-            ));
-            ?>
-        </nav>
-    </div>
-
-    
-</div>
+            <div class="  whitespace-nowrap  flex pt-[13px]">
+                <nav class="flex  ">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                        'menu_class'     => 'flex lg:text-[22px] 2xl:text-[28px]  text-[#B0B2B4] list-none font-artz',
+                        'fallback_cb'    => false,
+                        'walker'         => new Custom_Walker_Nav_Menu()
+                    ));
+                    ?>
+                </nav>
+            </div>
+        </div>
 
 
         <!-- Mobile Menu Button -->

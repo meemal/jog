@@ -2440,6 +2440,10 @@ video {
     font-size: 60px;
   }
 
+  .sm\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .sm\:leading-\[30px\] {
     line-height: 30px;
   }
@@ -2643,6 +2647,10 @@ video {
 
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .md\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .md\:leading-\[42px\] {
@@ -2901,6 +2909,10 @@ video {
     font-size: 82px;
   }
 
+  .lg\:text-\[22px\] {
+    font-size: 22px;
+  }
+
   .lg\:leading-\[35px\] {
     line-height: 35px;
   }
@@ -2925,6 +2937,16 @@ video {
 @media (min-width: 1280px) {
   .xl\:mr-\[250px\] {
     margin-right: 250px;
+  }
+
+  .xl\:text-\[28px\] {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-\[28px\] {
+    font-size: 28px;
   }
 }
 
