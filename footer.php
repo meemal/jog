@@ -94,7 +94,7 @@
                             foreach ($menu_sections as $menu_section) {
                                 echo '<div class="flex text-[#b0b2b4] font-artz flex-col space-y-[14px] ">'; // Adjusted text color & font weight
                                 foreach ($menu_section as $menu_item) {
-                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[28px] text-[#b0b2b4] leading-[27px] hover:text-[#9a0f1e]">' . esc_html($menu_item->title) . '</a>';
+                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[24px] text-[#b0b2b4] leading-[27px] hover:text-[#9a0f1e]">' . esc_html($menu_item->title) . '</a>';
                                 }
                                 echo '</div>';
                             }
@@ -122,7 +122,7 @@
                 </div> -->
                 
                 <div class="space-y-2 lg:block">
-                    <div class="text-left text-[28px] leading-[34px] font-artz text-[#b0b2b4]">
+                    <div class="text-left text-[22px] leading-[34px] font-artz text-[#b0b2b4]">
                         <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
                             <?php
