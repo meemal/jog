@@ -45,7 +45,7 @@ $get_involved_url = get_post_meta(get_the_ID(), '_get_involved_url', true);
 
     <!-- Load More Button -->
     <div class="flex justify-center mt-8">
-        <button id="load-more" class="hidden border font-brother font-bold text-[#FFFFFF] bg-[#6da3c4] hover:bg-[#5c8bad] px-6 py-3 rounded-lg text-[16px] transition-all duration-300">
+        <button id="load-more" class="hidden border font-brother font-bold text-[#FFFFFF] bg-mill-blue hover:bg-mill-blue-light px-6 py-3 rounded-lg text-[18px] transition-all duration-300">
             Load More
         </button>
     </div>

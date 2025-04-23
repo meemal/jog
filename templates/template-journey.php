@@ -37,7 +37,7 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
                     <nav class="flex flex-col sm:flex-row">
                         <?php foreach ($filtered_tabs as $index => $tab_name) : ?>
                             <button data-tab="tab-<?php echo esc_attr($index); ?>" 
-                                    class="tab-button text-[28px] text-[#2c2c2c] font-artz hover:text-[#9a0f1e] pb-[30px] lg:pb-[39.5px]
+                                    class="tab-button text-[28px] text-[#2c2c2c] font-artz hover:text-mill-red-high pb-[30px] lg:pb-[39.5px]
                                         relative px-[36px] 
                                         sm:after:content-[''] sm:after:absolute sm:after:w-[4px] sm:after:h-[25px] sm:after:rounded-lg sm:after:bg-[#E2D6C5] 
                                         sm:after:top-3 sm:after:right-0 sm:last:after:hidden

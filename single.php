@@ -123,9 +123,9 @@
                             <!-- Circle background with hover color transition -->
                             <circle cx="32.5" cy="32.5" r="32.5"
                                     transform="translate(65 1964.999)"
-                                    class="transition-colors duration-300 fill-[#e2d6c5] group-hover:fill-[#bba89c]" />
+                                    class="transition-colors duration-300 fill-mill-red group-hover:fill-mill-red-light" />
                             
-                            <!-- Arrow #6899BF-->
+                            <!-- Arrow white-->
                             <g transform="translate(74 1972.999)">
                                 <path d="M0,0H48V48H0Z" fill="none"/>
                                 <path d="M40,22H15.66L26.83,10.83,24,8,8,24,24,40l2.83-2.83L15.66,26H40Z"
@@ -199,8 +199,8 @@
             
                     // Conditional styling
                     $is_active = ($i == $current_page)
-                        ? 'text-mill-red border-[3px] border-[#E2D6C5]'
-                        : 'text-[#E2D6C5]';
+                        ? 'text-mill-red border-[3px] border-mill-oatmeal'
+                        : 'text-mill-oatmeal';
             
                     $post_index = ($i - 1) * $posts_per_page;
             
@@ -211,7 +211,7 @@
                                  class="hover:text-mill-red w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] 
                                         rounded-full ' . $text_size . ' ' . $is_active . ' 
                                         flex items-center justify-center 
-                                        transition-colors duration-300 hover:bg-[#e2d6c5]">' . $i . '</a>';
+                                        transition-colors duration-300 hover:bg-mill-oatmeal">' . $i . '</a>';
                     }
                 }
                 echo '</div>';
@@ -234,7 +234,7 @@
                             <!-- Circle background with transition -->
                             <circle cx="32.5" cy="32.5" r="32.5"
                                     transform="translate(1857 2029.999) rotate(180)"
-                                    class="transition-colors duration-300 fill-[#e2d6c5] group-hover:fill-[#bba89c]" />
+                                    class="transition-colors duration-300  fill-mill-red group-hover:fill-mill-red-light" />
                             
                             <!-- Arrow -->
                             <g transform="translate(1848 2021.999) rotate(180)">

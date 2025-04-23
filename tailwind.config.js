@@ -15,7 +15,12 @@ module.exports = {
       colors: {
         'mill-red': '#9A0F1E',
         'mill-red-high': '#B81E26',
-        'mill-blue': '#6899BF'
+        'mill-blue': '#6899BF',
+        'mill-blue-light': '#A4C8E1',
+        'mill-smoke': '#787573',
+        'mill-warm-grey': '#474341',
+        'mill-warm-oatmeal': '#E2D6C5'
+        
       },
       // fontFamily: {
       //   hwt: ["HWT_Artz", "sans-serif"],

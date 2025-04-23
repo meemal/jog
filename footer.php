@@ -130,7 +130,7 @@
                             $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
                             ?>
                             <?php if ($contact_url && $email) : ?>
-                                <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:to-mill-red-high">
+                                <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:text-mill-red-high">
                                                 Contact Us
                                            
                                 </a>
