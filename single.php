@@ -18,7 +18,7 @@
     ?>
 
 
-    <div class="container pt-[34px] items-center ">
+    <div class="container pt-[34px] items-center news-container">
         <a class="group flex gap-[16px] items-center" href="<?php echo esc_url($news_link); ?>">
             <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" class="transition-colors duration-300">
                 <g transform="translate(-65 -1965)">
@@ -36,7 +36,7 @@
                 </g>
             </svg>
 
-            <h1 class="text-[#474442] text-[28px] font-artz mt-1 transition-colors duration-300 group-hover:text-[#9A0F1E]">
+            <h1 class="text-mill-warm-grey text-[28px] font-artz mt-1 transition-colors duration-300 group-hover:text-mill-red">
                 Back to news
             </h1>
         </a>
@@ -48,10 +48,10 @@
 
     <section>
         <div class="text-center ssm:text-left container pt-[71px] md:pt-[105px]">
-            <h1 class="text-[#9A0F1E] font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px]"><?php the_title(); ?></h1>
+            <h1 class="text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px]"><?php the_title(); ?></h1>
 
             <?php if (has_excerpt()) : ?>
-                <p class="text-[#474442] font-artz text-[40px] lg:text-[42px] leading-[40px] w-full lg:max-w-[1306px] mb-[20px] lg:mb-[80px] ">
+                <p class="text-mill-warm-grey font-artz text-[40px] lg:text-[42px] leading-[40px] w-full lg:max-w-[1306px] mb-[20px] lg:mb-[80px] ">
                     <?php echo wp_strip_all_tags(get_the_excerpt()); ?>
                 </p>
 
@@ -63,7 +63,7 @@
     <section class="text-center ssm:text-left container <?php echo has_post_thumbnail() ? 'grid grid-cols-1 lg:grid-cols-2' : ''; ?> gap-[60px] lg:gap-[73px] mb-8 pt-5">
         <?php if (has_post_thumbnail()) : ?>
             <!-- Text First on Mobile, Second on Desktop -->
-            <div class="order-1 lg:order-2 text-[#2C2C2C] font-normal max-h-full lg:max-h-[700px] overflow-auto font-hwt_regular text-[22px] lg:text-[28px] leading-[32px] lg:leading-[38px]">
+            <div class="order-1 lg:order-2 text-dark-grey font-normal max-h-full lg:max-h-[700px] overflow-auto font-hwt_regular text-[22px] lg:text-[28px] leading-[32px] lg:leading-[38px]">
                 <?php the_content(); ?>
             </div>
 
@@ -73,7 +73,7 @@
             </div>
         <?php else : ?>
             <!-- Full-width layout when no image -->
-            <div class="text-[#2C2C2C] font-normal text-[22px] lg:text-[28px] leading-[32px] lg:leading-[38px]">
+            <div class="text-dark-grey font-normal text-[22px] lg:text-[28px] leading-[32px] lg:leading-[38px]">
                 <?php the_content(); ?>
             </div>
         <?php endif; ?>
@@ -83,7 +83,7 @@
 
     <!-- Share Section -->
     <section class=" mb-[100px] lg:mb-[200px] container mt-[55px] lg:mt-[78px]">
-        <h3 class="text-[#474442] font-artz text-[42px] ">Share</h3>
+        <h3 class="text-mill-warm-grey font-artz text-[42px] ">Share</h3>
         <div class="flex -mt-3 ml-[-16px]">
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" 
             class="w-[65px] h-[65px] flex items-center justify-center rounded-full hover:bg-[#e2d6c5] transition-all duration-300" 
@@ -274,7 +274,7 @@
             <?php if ($prev_post) : ?>
                 <div>
                     <p class="text-[22px] font-normal text-[#474341] mb-2">Next</p>
-                    <h2 class="text-[40px] hover:text-[#9A0F1E] duration-200 sm:text-[60px] font-artz leading-[35px] sm:leading-[55px] text-[#2C2C2C]">
+                    <h2 class="text-[40px] hover:text-mill-red duration-200 sm:text-[60px] font-artz leading-[35px] sm:leading-[55px] text-dark-grey">
                         <a href="<?php echo get_permalink($prev_post->ID); ?>">
                             <?php echo get_the_title($prev_post->ID); ?>
                         </a>

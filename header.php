@@ -33,7 +33,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="font-light font-brother bg-[#F9F5ED]" <?php body_class(); ?>>
+<body class="font-light font-brother bg-warm-oatmeal-light" <?php body_class(); ?>>
 
     <!-- Header/Navigation -->
 <header class="w-full container relative bg-[#FFFFFF] z-50 rounded-b-[40px]">

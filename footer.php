@@ -24,7 +24,7 @@
                                 <div class=" w-[346px] text-left font-artz text-gray-400 text-[28px] leading-[27px]"> 
                                     <p>THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                                     <p class="text-left mt-1 font-artz">
-                                        <a href="mailto:<?php // echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-[#9a0f1e]">
+                                        <a href="mailto:<?php // echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-mill-red">
                                             <?php // echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>
                                         </a>
                                     </p>
@@ -59,7 +59,7 @@
 
                                 <?php if (!empty($instagram)) : ?>
                                     <a href="<?php echo esc_url($instagram); ?>" target="_blank" class="relative group block w-[45px] h-[45px] mt-[-2px]">
-                                        <span class="absolute top-1/2 left-1/2 w-[40px] h-[40px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9a0f1e] opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
+                                        <span class="absolute top-1/2 left-1/2 w-[40px] h-[40px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mill-red opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" class="w-[45px] h-[45px] object-contain relative z-10" alt="Instagram">
                                     </a>
                                 <?php endif; ?>
@@ -67,7 +67,7 @@
                                 <?php if (!empty($facebook)) : ?>
                                     <a href="<?php echo esc_url($facebook); ?>" target="_blank" class="relative group block w-[40px] h-[40px]">
                                         <!-- Hover background circle (smaller than the image) -->
-                                        <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9a0f1e] opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
+                                        <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mill-red opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
 
                                         <!-- Actual image -->
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg"
@@ -94,7 +94,7 @@
                             foreach ($menu_sections as $menu_section) {
                                 echo '<div class="flex text-[#b0b2b4] font-artz flex-col space-y-[14px] ">'; // Adjusted text color & font weight
                                 foreach ($menu_section as $menu_item) {
-                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[24px] text-[#b0b2b4] leading-[27px] hover:text-[#9a0f1e]">' . esc_html($menu_item->title) . '</a>';
+                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[24px] text-[#b0b2b4] leading-[27px] hover:text-mill-red">' . esc_html($menu_item->title) . '</a>';
                                 }
                                 echo '</div>';
                             }
@@ -114,7 +114,7 @@
                     <div class="text-left text-[28px] leading-[34px] font-artz text-[#b0b2b4]  "> 
                         <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
-                            <a href="mailto:<?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-[#9a0f1e] text-[28px] leading-[34px]">
+                            <a href="mailto:<?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-mill-red text-[28px] leading-[34px]">
                             <?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>
                             </a>
                         </p>
@@ -149,7 +149,7 @@
 
                     <?php if (!empty($instagram)) : ?>
                         <a href="<?php echo esc_url($instagram); ?>" target="_blank" class="relative group block w-[45px] h-[45px] mt-[-2px]">
-                            <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9a0f1e] opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
+                            <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mill-red opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" class="w-[45px] h-[45px] object-contain relative z-10" alt="Instagram">
                         </a>
 
@@ -159,7 +159,7 @@
                     <?php if (!empty($facebook)) : ?>
                         <a href="<?php echo esc_url($facebook); ?>" target="_blank" class="relative group block w-[40px] h-[40px]">
                             <!-- Hover background circle (smaller than the image) -->
-                            <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9a0f1e] opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
+                            <span class="absolute top-1/2 left-1/2 w-[30px] h-[30px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mill-red opacity-0 group-hover:opacity-100 transition-all duration-300 z-0"></span>
 
                             <!-- Actual image -->
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg"

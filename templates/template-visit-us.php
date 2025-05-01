@@ -20,10 +20,10 @@ if (filter_var($visit_us_title, FILTER_VALIDATE_URL)) {
 <section class="text-center ssm:text-left">
     <div class="px-4  sm:container pt-[60px] sm:pt-[100px] lg:pt-[180px]">
         <!-- Dynamic Page Title -->
-        <h1 class="text-[#9A0F1E] text-[40px] sm:text-[60px] lg:text-[120px] font-artz mb-[20px] sm:mb-[40px]"><?php the_title(); ?></h1>
+        <h1 class="text-mill-red text-[40px] sm:text-[60px] lg:text-[120px] font-artz mb-[20px] sm:mb-[40px]"><?php the_title(); ?></h1>
 
         <!-- Dynamic Page Content -->
-        <div class="text-[#474442] font-artz text-[25px] sm:text-[40px] lg:text-[42px] w-full lg:max-w-[1306px] leading-[30px] sm:leading-[40px]">
+        <div class="text-mill-warm-grey font-artz text-[25px] sm:text-[40px] lg:text-[42px] w-full lg:max-w-[1306px] leading-[30px] sm:leading-[40px]">
             <?php the_content(); ?>
         </div>
     </div>
@@ -35,11 +35,11 @@ if (filter_var($visit_us_title, FILTER_VALIDATE_URL)) {
         <div class="px-4 sm:container mt-[20px] sm:mt-[40px] mb-[20px] sm:mb-[50px]">
             <?php if (!empty($final_link)) : ?>
                 <a href="<?php echo esc_url($final_link); ?>" target="_blank"
-                class="text-[#9A0F1E] font-artz text-[30px] sm:text-[42px] hover:underline transition-all duration-300">
+                class="text-mill-red font-artz text-[30px] sm:text-[42px] hover:underline transition-all duration-300">
                     <?php echo esc_html($visit_us_title); ?>
                 </a>
             <?php else : ?>
-                <span class="text-[#9A0F1E] font-artz text-[30px] sm:text-[42px]">
+                <span class="text-mill-red font-artz text-[30px] sm:text-[42px]">
                     <?php echo esc_html($visit_us_title); ?>
                 </span>
             <?php endif; ?>

@@ -133,7 +133,7 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
 <?php endif; ?>
 
 <!-- News and Events Section -->
-<section class="bg-[#f9f5ed] pt-[54px] pb-[85px] lg:pb-[224px]">
+<section class="bg-warm-oatmeal-light pt-[54px] pb-[85px] lg:pb-[224px]">
     <div class="px-[20px]">
         <h2 class="container text-[40px] md:text-[60px] font-artz mb-[49px] md:mb-[40px] text-[#474341]">NEWS AND EVENTS</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4  ">

@@ -10,8 +10,8 @@ $get_involved_url = get_post_meta(get_the_ID(), '_get_involved_url', true);
 <div class=" pt-[130px] lg:pt-[230px]">
     <div class="container">
         <div class="w-auto lg:max-w-[1306px] mb-[74px] md:mb-[114px] text-center ssm:text-left">
-            <h1 class="text-[#9a0f1e] font-artz text-[60px] lg:text-[120px] leading-[55px] mb-[65px] md:mb-[100px] "><?php the_title(); ?></h1>
-            <div class="text-[#474442] font-artz text-[40px] lg:text-[42px]  leading-[40px] ">
+            <h1 class="text-mill-red font-artz text-[60px] lg:text-[120px] leading-[55px] mb-[65px] md:mb-[100px] "><?php the_title(); ?></h1>
+            <div class="text-mill-warm-grey font-artz text-[40px] lg:text-[42px]  leading-[40px] ">
                 <?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
             </div>
         </div>
@@ -53,7 +53,7 @@ $get_involved_url = get_post_meta(get_the_ID(), '_get_involved_url', true);
 
 <!-- Only show this section if a link exists -->
 <?php if (!empty($get_involved_url)) : ?>
-    <div class="get-involved-section bg-[#9A0F1E] pt-[66px] pb-[80.5px] lg:pt-[112px] lg:pb-[112px] rounded-t-[30px]">
+    <div class="get-involved-section bg-mill-red pt-[66px] pb-[80.5px] lg:pt-[112px] lg:pb-[112px] rounded-t-[30px]">
         <div class=" pr-[63px] pl-[53px]">
             <div class="flex justify-between items-center">
                 <h2 class="text-white leading-[55px] font-artz text-[40px] sm:text-[60px]">GET INVOLVED</h2>

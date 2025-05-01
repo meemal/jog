@@ -8,11 +8,11 @@ $tabs = get_post_meta($page_id, 'journey_tabs', true); // Fetch tabs from meta
 $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
 ?>
 
-<main class="bg-[#f9f5ed] pt-[135px] lg:pt-[225px] pb-[94px] lg:pb-[290px]">
+<main class="bg-warm-oatmeal-light pt-[135px] lg:pt-[225px] pb-[94px] lg:pb-[290px]">
     <div class="container text-center ssm:text-left">
-        <h1 class=" text-[#9a0f1e] font-artz text-[60px] md:text-[120px] leading-[55px] mb-[45px] md:mb-[100px] "><?php the_title(); ?></h1>
+        <h1 class=" text-mill-red font-artz text-[60px] md:text-[120px] leading-[55px] mb-[45px] md:mb-[100px] "><?php the_title(); ?></h1>
 
-        <div class=" text-[#474442] font-artz text-[40px] md:text-[42px] leading-[40px] max-w-[90rem] mb-[73px] lg:mb-[120px]">
+        <div class=" text-mill-warm-grey font-artz text-[40px] md:text-[42px] leading-[40px] max-w-[90rem] mb-[73px] lg:mb-[120px]">
             <?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
         </div>
 
@@ -33,11 +33,11 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
             if (!empty($filtered_tabs)) :
                 $first_tab_key = array_key_first($filtered_tabs);
         ?>
-                <div class="border-b border-[#e2c5d1] mb-[62px] lg:mb-[61px]">
+                <div class="border-b border--mill-peach-light mb-[62px] lg:mb-[61px]">
                     <nav class="flex flex-col sm:flex-row">
                         <?php foreach ($filtered_tabs as $index => $tab_name) : ?>
                             <button data-tab="tab-<?php echo esc_attr($index); ?>" 
-                                    class="tab-button text-[28px] text-[#2c2c2c] font-artz hover:text-mill-red-high pb-[30px] lg:pb-[39.5px]
+                                    class="tab-button text-[28px] text-dark-grey font-artz hover:text-mill-red-high pb-[30px] lg:pb-[39.5px]
                                         relative px-[36px] 
                                         sm:after:content-[''] sm:after:absolute sm:after:w-[4px] sm:after:h-[25px] sm:after:rounded-lg sm:after:bg-[#E2D6C5] 
                                         sm:after:top-3 sm:after:right-0 sm:last:after:hidden
@@ -59,7 +59,7 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
                             class="grid lg:grid-cols-2 gap-0 sm:gap-[51px] lg:gap-[73px] tab-content <?php echo ($tab_id == $first_tab_key) ? '' : 'hidden'; ?>">
                             
                             <!-- Content First on Mobile, Second on Desktop -->
-                            <div class="space-y-6 text-[22px] max-h-full lg:max-h-[750px] lg:overflow-auto leading-[32px] lg:text-[28px] lg:leading-[38px] text-[#2c2c2c]  font-brother font-normal  order-1 lg:order-2 mt-[-27px]">
+                            <div class="space-y-6 text-[22px] max-h-full lg:max-h-[750px] lg:overflow-auto leading-[32px] lg:text-[28px] lg:leading-[38px] text-dark-grey  font-brother font-normal  order-1 lg:order-2 mt-[-27px]">
                                 <p><?php echo wp_kses_post($tab_content); ?></p>
                             </div>
 
@@ -91,7 +91,7 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
         <div class="flex justify-between items-center">
             <div class="">
                 <p class=" font-normal text-[22px] text-[#474341]">Next</p>
-                <p class="text-[40px] sm:text-[60px] font-bold text-[#2c2c2c] font-artz hover:text-mill-red next-text">VISION</p>
+                <p class="text-[40px] sm:text-[60px] font-bold text-dark-grey font-artz hover:text-mill-red next-text">VISION</p>
             </div>
             <a href="#"
    class="group w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] font-bold rounded-full border-[3px] border-gray-500 flex items-center justify-center mt-4 nextBtn">
