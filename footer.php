@@ -92,9 +92,9 @@
 
                             echo '<div class="flex flex-col mr-8 gap-4 lg:flex-row lg:gap-[105px] ">';
                             foreach ($menu_sections as $menu_section) {
-                                echo '<div class="flex text-[#b0b2b4] font-artz flex-col space-y-[14px] ">'; // Adjusted text color & font weight
+                                echo '<div class="flex text-mill-smoke-light font-artz flex-col space-y-[14px] ">'; // Adjusted text color & font weight
                                 foreach ($menu_section as $menu_item) {
-                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[24px] text-[#b0b2b4] leading-[27px] hover:text-mill-red">' . esc_html($menu_item->title) . '</a>';
+                                    echo '<a href="' . esc_url($menu_item->url) . '" class="text-[24px] text-mill-smoke-light leading-[27px] hover:text-mill-red">' . esc_html($menu_item->title) . '</a>';
                                 }
                                 echo '</div>';
                             }
@@ -111,7 +111,7 @@
             <!-- Footer Right: Organization Info & Social Links -->
             <div class="hidden lg:flex flex-col lg:flex-row gap-[132.6px]">
                 <!-- <div class="space-y-2 lg:block">
-                    <div class="text-left text-[28px] leading-[34px] font-artz text-[#b0b2b4]  "> 
+                    <div class="text-left text-[28px] leading-[34px] font-artz text-mill-smoke-light  "> 
                         <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
                             <a href="mailto:<?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-mill-red text-[28px] leading-[34px]">
@@ -122,7 +122,7 @@
                 </div> -->
                 
                 <div class="space-y-2 lg:block">
-                    <div class="text-left text-[22px] leading-[34px] font-artz text-[#b0b2b4]">
+                    <div class="text-left text-[22px] leading-[34px] font-artz text-mill-smoke-light">
                         <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
                             <?php
@@ -174,7 +174,7 @@
         </div>
 
         <!-- Copyright -->
-        <p class="text-[#474341] leading-[21px] text-[16px] mt-[105px] md:mt-[108.2px]"> <!-- Adjusted copyright text size -->
+        <p class="text-mill-warm-grey leading-[21px] text-[16px] mt-[105px] md:mt-[108.2px]"> <!-- Adjusted copyright text size -->
            © <?php echo date("Y"); ?> The John O'Groats Mill Trust. All rights reserved.
         </p>
     </div>

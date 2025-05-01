@@ -273,7 +273,7 @@
             
             <?php if ($prev_post) : ?>
                 <div>
-                    <p class="text-[22px] font-normal text-[#474341] mb-2">Next</p>
+                    <p class="text-[22px] font-normal text-mill-warm-grey mb-2">Next</p>
                     <h2 class="text-[40px] hover:text-mill-red duration-200 sm:text-[60px] font-artz leading-[35px] sm:leading-[55px] text-dark-grey">
                         <a href="<?php echo get_permalink($prev_post->ID); ?>">
                             <?php echo get_the_title($prev_post->ID); ?>

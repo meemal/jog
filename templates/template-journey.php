@@ -90,7 +90,7 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
     <div class="container">
         <div class="flex justify-between items-center">
             <div class="">
-                <p class=" font-normal text-[22px] text-[#474341]">Next</p>
+                <p class=" font-normal text-[22px] text-mill-warm-grey">Next</p>
                 <p class="text-[40px] sm:text-[60px] font-bold text-dark-grey font-artz hover:text-mill-red next-text">VISION</p>
             </div>
             <a href="#"

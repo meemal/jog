@@ -60,30 +60,33 @@
         @apply text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px];
       }
       h2:not([class]) {
-        @apply text-mill-smoke font-artz text-6xl;
+        @apply text-5xl  text-mill-smoke font-artz;
       }
       h3:not([class]) {
-        @apply text-5xl font-medium text-mill-smoke leading-normal;
-      }
-      h4:not([class]) {
         @apply text-4xl font-medium text-mill-smoke leading-normal;
       }
-      h5:not([class]) {
+      h4:not([class]) {
         @apply text-3xl font-medium text-mill-smoke leading-normal;
       }
-      h6:not([class]) {
+      h5:not([class]) {
         @apply text-2xl font-medium text-mill-smoke leading-normal;
       }
-      p:not([class]) {
-        @apply text-base text-mill-warm-grey leading-relaxed;
+      h6:not([class]) {
+        @apply font-medium text-mill-smoke leading-normal;
       }
+    
       a:not([class]) {
         @apply text-base text-mill-blue leading-relaxed;
       }
       a:not([class]):hover {
         @apply text-base text-mill-blue underline leading-relaxed;
       }
-    
+      .tag-events{
+        @apply border border-mill-peach-light px-2 rounded bg-mill-peach-light;  
+      }
+      .tag-news{
+        @apply border border-mill-blue-light px-2 rounded bg-mill-blue-light; 
+      }
 }
 
 

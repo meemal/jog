@@ -1,10 +1,15 @@
 module.exports = {
   // mode: 'jit', // Enable Just-In-Time mode
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
   content: [
     "./**/*.php",
     "./**/*.html",
     "./assets/js/**/*.js",
     "./templates/**/*.php",
+    "./assets/css/**/*.css", // Include CSS files
   ],
   safelist: [
     "font-hwt", 
@@ -12,17 +17,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontSize: {
-        'h1': ['2.25rem', { lineHeight: '2.5rem', fontWeight: '700' }], // 36px
-        'h2': ['1.875rem', { lineHeight: '2.25rem', fontWeight: '700' }], // 30px
-        'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '600' }], // 24px
-      },
+  
       colors: {
         'mill-red': '#9A0F1E',
         'mill-red-high': '#B81E26',
         'mill-blue': '#6899BF',
         'mill-blue-light': '#A4C8E1',
         'mill-smoke': '#787573',
+        'mill-smoke-light': '#b0b2b4',
         'mill-warm-grey': '#474341',
         'mill-peach-light': '#e2c5d1',
         'mill-warm-oatmeal': '#E2D6C5',

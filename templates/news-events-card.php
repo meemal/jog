@@ -1,4 +1,4 @@
-<div class="news-card rounded-[40px] border-[1px] border-[#B0B2B4] lg:h-auto flex flex-col sm:flex-row-reverse items-center md:justify-start md:flex-col
+<div class="news-card rounded-[40px] border-[1px] border-mill-smoke-light lg:h-auto flex flex-col sm:flex-row-reverse items-center md:justify-start md:flex-col
             md:h-auto px-[23px]  lg:px-[42px] pt-[32px] lg:pt-[53px]">
 
     <!-- Featured Image -->

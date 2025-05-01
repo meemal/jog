@@ -46,7 +46,7 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
 
 <?php if ($journey_enabled) : ?>
     <!-- Follow Our Journey Section -->
-    <section class="bg-[#B0B2B4]  text-white pt-[55px] md:pt-[50px]  rounded-t-[30px] relative mt-[-30px] lg:mt-[-160px] z-[30]">
+    <section class="bg-mill-smoke-light  text-white pt-[55px] md:pt-[50px]  rounded-t-[30px] relative mt-[-30px] lg:mt-[-160px] z-[30]">
 
         <div class="container flex justify-start items-center ssm:items-end gap-[1rem] flex-col ">
             <div class="text-center ssm:text-left">
@@ -135,7 +135,7 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
 <!-- News and Events Section -->
 <section class="bg-warm-oatmeal-light pt-[54px] pb-[85px] lg:pb-[224px]">
     <div class="px-[20px]">
-        <h2 class="container text-[40px] md:text-[60px] font-artz mb-[49px] md:mb-[40px] text-[#474341]">NEWS AND EVENTS</h2>
+        <h2 class="container text-[40px] md:text-[60px] font-artz mb-[49px] md:mb-[40px] text-mill-warm-grey">NEWS AND EVENTS</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4  ">
             <?php
             $event_query = new WP_Query(array(
@@ -145,10 +145,24 @@ $stay_image = get_post_meta($post_id, '_stay_image', true);
             ));
             if ($event_query->have_posts()) :
                 while ($event_query->have_posts()) : $event_query->the_post(); ?>
-                    <div class="bg-transparent border-[1px] border-[#b0b2b4] h-auto pt-[20px] lg:pt-[49px] px-[22px] lg:px-[40px] rounded-[40px] hover:shadow-lg transition-all duration-300 relative">
-                        <span class="text-[22px] leading-[30px] text-[#474341] "><?php echo get_the_category_list(', '); ?></span>
-                        <h3 class="text-[40px] leading-[55px] text-[#474341] md:text-[60px] font-artz mt-[10px] mb-4 "><?php the_title(); ?></h3>
-                        <p class="text-[#474341] pb-[32px] lg:pb-[111px]  text-[22px] max-w-[420px] sm:max-w-[520px] md:max-w-full mb-[35px] md:text-[29px] leading-[32px] lg:leading-[42px]  md:mb-[119px]"><?php echo wp_trim_words(get_the_excerpt(), 17); ?></p>
+                    <div class="bg-transparent border-[1px] border-mill-smoke-light h-auto pt-[20px] lg:pt-[49px] px-[22px] lg:px-[40px] rounded-[40px] hover:shadow-lg transition-all duration-300 relative">
+                        <span class="text-[22px] leading-[30px] text-mill-warm-grey ">
+                        <?php
+                            $categories = get_the_category();
+                            if (!empty($categories)) {
+                                foreach ($categories as $category) {
+                                    $name = esc_html($category->name);
+                                  echo ' <span class="tag-'.strtolower($name).'">'.$name . '</span>';
+                                }
+                            }
+                            ?>
+
+
+
+
+                        </span>
+                        <h3 class="text-[40px] leading-[55px] text-mill-warm-grey md:text-[60px] font-artz mt-[10px] mb-4 "><?php the_title(); ?></h3>
+                        <p class="text-mill-warm-grey pb-[32px] lg:pb-[111px]  text-[22px] max-w-[420px] sm:max-w-[520px] md:max-w-full mb-[35px] md:text-[29px] leading-[32px] lg:leading-[42px]  md:mb-[119px]"><?php echo wp_trim_words(get_the_excerpt(), 17); ?></p>
                         <a href="<?php the_permalink(); ?>" class="group w-[40px] sm:w-[65px] h-[40px] sm:h-[65px] mt-4 bg-transparent rounded-full absolute right-8 bottom-[32px] lg:bottom-0 lg:mb-[44px] flex items-center justify-center transition-colors duration-300 hover:bg-mill-blue">
                                 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" class="w-full h-full">

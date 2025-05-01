@@ -58,7 +58,7 @@
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'container'      => false,
-                        'menu_class'     => 'flex lg:text-[22px] 2xl:text-[28px]  text-[#B0B2B4] list-none font-artz',
+                        'menu_class'     => 'flex lg:text-[22px] 2xl:text-[28px]  text-mill-smoke-light list-none font-artz',
                         'fallback_cb'    => false,
                         'walker'         => new Custom_Walker_Nav_Menu()
                     ));
