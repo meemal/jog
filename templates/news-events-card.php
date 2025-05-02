@@ -35,10 +35,21 @@
     <!-- Content -->
     <div class="flex flex-col h-full w-full">
         <!-- Post Title -->
+        <span class="text-[22px] leading-[30px] text-mill-warm-grey mb-4">
+            <?php
+                $categories = get_the_category();
+                if (!empty($categories)) {
+                    foreach ($categories as $category) {
+                        $name = esc_html($category->name);
+                        echo ' <span class="tag-'.strtolower($name).'">'.$name . '</span>';
+                    }
+                }
+                ?>
+            </span>
         <h3 class="text-mill-warm-grey text-[40px] lg:text-[60px] font-artz leading-[40px] lg:leading-[55px] mb-6">
             <a href="<?php the_permalink(); ?>" class="hover:text-mill-red"><?php the_title(); ?></a>
         </h3>
-
+       
         <!-- Post Excerpt -->
         <p class="text-mill-warm-grey max-w-[472px] md:max-w-full mb-[25px]  font-hwt_light md:text-[29px] text-[22px] leading-[32px] md:leading-[42px]">
             <?php echo wp_trim_words(get_the_excerpt(), 17, '...'); ?>

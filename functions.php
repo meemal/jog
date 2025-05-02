@@ -211,4 +211,13 @@ function my_acf_json_save_point( $path ) {
 }
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
+// =============================================
+// Edd excerpts to pages
+// =============================================
+
+function add_excerpt_to_pages() {
+    add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'add_excerpt_to_pages');
+
 ?>
