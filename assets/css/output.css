@@ -1190,6 +1190,10 @@ a:not([class]):hover {
   margin-top: auto;
 }
 
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
 .block {
   display: block;
 }
@@ -2766,6 +2770,10 @@ a:not([class]):hover {
     margin-top: 40px;
   }
 
+  .sm\:mt-\[60px\] {
+    margin-top: 60px;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -3178,6 +3186,10 @@ a:not([class]):hover {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .lg\:max-w-\[1280px\] {
