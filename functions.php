@@ -170,7 +170,7 @@ $includes = [
     'inc/journey-meta-box.php',
     // 'inc/news-event-meta-box.php',
     'inc/load-more.php',
-    'inc/visit-us-meta-box.php',
+    // 'inc/visit-us-meta-box.php',
     'inc/theme-option.php',
     'inc/contact-meta-box.php',
 ];
