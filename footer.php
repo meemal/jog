@@ -1,5 +1,6 @@
 <!-- Footer -->
 <?php $get_involved_url  = get_option('john_mill_footer_get_involved', '');?>
+<?php $contact_url  = get_option('john_mill_footer_contact_url', '');?>
 
 <!-- Only show this section if a link exists -->
 <?php if (!empty($get_involved_url)) : ?>
@@ -41,16 +42,7 @@
                 <div class="w-full">
                     <div class="block lg:hidden mb-6">
                         <div class="flex flex-col gap-2">
-                            <!-- <div class="space-y-2">
-                                <div class=" w-[346px] text-left font-artz text-gray-400 text-[28px] leading-[27px]"> 
-                                    <p>THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
-                                    <p class="text-left mt-1 font-artz">
-                                        <a href="mailto:<?php // echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-mill-red">
-                                            <?php // echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div> -->
+                     
 
                             <div class="space-y-2">
                                 <div class="w-[346px] text-left font-artz text-gray-400 text-[28px] leading-[27px]">
@@ -131,27 +123,15 @@
 
             <!-- Footer Right: Organization Info & Social Links -->
             <div class="hidden lg:flex flex-col lg:flex-row gap-[132.6px]">
-                <!-- <div class="space-y-2 lg:block">
-                    <div class="text-left text-[28px] leading-[34px] font-artz text-mill-smoke-light  "> 
-                        <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
-                        <p class="text-left font-artz">
-                            <a href="mailto:<?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>" class="text-mill-red text-[28px] leading-[34px]">
-                            <?php //echo antispambot(get_option('john_mill_footer_email', 'groatsmill@gmail.com')); ?>
-                            </a>
-                        </p>
-                    </div>
-                </div> -->
+             
                
                 <div class="space-y-2 lg:block">
                     <div class="text-left text-[22px] leading-[34px] font-artz text-mill-smoke-light">
                         <p class="mb-2 leading-[1]">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
-                            <?php
-                            $contact_url = get_contact_page_url_by_template_name();
-                            $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
-                            ?>
-                            <?php if ($contact_url && $email) : ?>
-                                <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:text-mill-red-high">
+                         
+                            <?php if ($contact_url) : ?>
+                                <a href="<?php echo esc_url($contact_url ); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:text-mill-red-high">
                                                 Contact Us
                                            
                                 </a>

@@ -168,7 +168,7 @@ $includes = [
     'inc/customizer.php',
     'inc/home-meta-box.php',
     'inc/journey-meta-box.php',
-    'inc/news-event-meta-box.php',
+    // 'inc/news-event-meta-box.php',
     'inc/load-more.php',
     'inc/visit-us-meta-box.php',
     'inc/theme-option.php',
