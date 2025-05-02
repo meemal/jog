@@ -49,10 +49,10 @@
                                     <p>THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                                     <p class="text-left mt-1 font-artz">
                                         <?php
-                                        $contact_url = get_contact_page_url_by_template_name(); // use the same helper function
-                                        $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
+                                        $contact_url = contact_url(); 
+                                       
                                         ?>
-                                        <?php if ($contact_url && $email) : ?>
+                                        <?php if ($contact_url) : ?>
                                             <a href="<?php echo esc_url($contact_url); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:to-mill-red-high">
                                                 Contact Us
                                             </a>
