@@ -8,12 +8,8 @@ get_header();
 $visit_us_title = get_post_meta(get_the_ID(), 'visit_us_title', true);
 $visit_us_map = get_post_meta(get_the_ID(), 'visit_us_map', true);
 
-// Determine final link (based on validation)
-$final_link = '';
-if (filter_var($visit_us_title, FILTER_VALIDATE_URL)) {
-    $final_link = $visit_us_title;
-} elseif (!empty($visit_us_map)) {
-    $final_link = $visit_us_map;
+if (isset($what_3_words)){
+    $what_3_words_link = "https://what3words.com/".strtolower(str_replace('///', '', $what_3_words));
 }
 
 ?>
@@ -33,16 +29,21 @@ if (filter_var($visit_us_title, FILTER_VALIDATE_URL)) {
     <!-- Map Section -->
     <div class=" w-full h-[518px] lg:h-[1152px] relative mb-[200px] sm:mb-[782.6px] lg:mb-[350px]">
         <div class="px-4 sm:container mt-[20px] sm:mt-[40px] mb-[20px] sm:mb-[50px]">
-            <?php if (!empty($final_link)) : ?>
-                <a href="<?php echo esc_url($final_link); ?>" target="_blank"
-                class="text-mill-red font-artz text-[30px] sm:text-[42px] hover:underline transition-all duration-300">
-                    <?php echo esc_html($visit_us_title); ?>
-                </a>
-            <?php else : ?>
-                <span class="text-mill-red font-artz text-[30px] sm:text-[42px]">
-                    <?php echo esc_html($visit_us_title); ?>
-                </span>
-            <?php endif; ?>
+            <?php if (!empty($final_link)) { ?>
+                <div class="px-4 sm:container mt-[20px] sm:mt-[40px] mb-[20px] sm:mb-[50px]">
+            
+               
+            <a href="<?php echo esc_url($what_3_words_link); ?>" target="_blank"
+            class="text-mill-red font-artz text-[30px] sm:text-[42px] hover:underline transition-all duration-300">
+                <?php echo esc_html($what_3_words); ?> 
+            </a>
+
+
+
+
+
+    </div>
+            <?php }; ?>
         </div>
 
 

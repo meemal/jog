@@ -20,7 +20,7 @@ function visit_us_meta_box_callback($post) {
 
     ?>
     <p>
-        <label for="visit_us_title"><strong>Title</strong></label><br>
+        <label for="visit_us_title"><strong>What 3 Words</strong></label><br>
         <input type="text" id="visit_us_title" name="visit_us_title" value="<?php echo esc_attr($visit_us_title); ?>" class="widefat">
     </p>
     <p>

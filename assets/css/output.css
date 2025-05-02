@@ -935,9 +935,23 @@ a:not([class]):hover {
   margin: 0px;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .-ml-2 {
@@ -1176,6 +1190,10 @@ a:not([class]):hover {
   margin-top: auto;
 }
 
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
 .block {
   display: block;
 }
@@ -1318,6 +1336,10 @@ a:not([class]):hover {
 
 .w-full {
   width: 100%;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .max-w-3xl {
@@ -2759,6 +2781,10 @@ a:not([class]):hover {
     margin-top: 40px;
   }
 
+  .sm\:mt-\[60px\] {
+    margin-top: 60px;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -3171,6 +3197,10 @@ a:not([class]):hover {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .lg\:max-w-\[1280px\] {
