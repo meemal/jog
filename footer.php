@@ -1,4 +1,25 @@
 <!-- Footer -->
+<?php $get_involved_url  = get_option('john_mill_footer_get_involved', '');?>
+
+<!-- Only show this section if a link exists -->
+<?php if (!empty($get_involved_url)) : ?>
+    <div class="get-involved-section bg-mill-red pt-[66px] pb-[80.5px] lg:pt-[112px] lg:pb-[112px] rounded-t-[30px]">
+        <div class=" pr-[63px] pl-[53px]">
+            <div class="flex justify-between items-center">
+                <h2 class="text-white leading-[55px] font-artz text-[40px] sm:text-[60px]">GET INVOLVED</h2>
+                <a href="<?php echo esc_url($get_involved_url); ?>" 
+                   class="flex items-center justify-center w-[45px] h-[45px] sm:w-[65px] sm:h-[65px] bg-gray-600/30 rounded-full hover:bg-gray-600/50">
+
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 8l4 4m0 0l-4 4m4-4H8" stroke="white"/>
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
 <footer class="bg-[#FFFFFF] pt-[71px] pb-[39px] md:pt-[85px] md:pb-[60px] rounded-t-[30px] mt-[-25px]">
     <div class="container  px-[3rem] text-sm lg:text-md text-[16px]"> <!-- Reduced text size -->
         <div class="flex flex-col lg:flex-row lg:justify-between items-start">

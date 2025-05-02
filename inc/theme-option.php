@@ -31,9 +31,13 @@ function john_mill_theme_options_page() { ?>
 function john_mill_theme_settings() {
     add_settings_section('john_mill_social_links', 'Footer Settings', null, 'john_mill_theme_options');
 
-    // Email
+    // Contact
     add_settings_field('john_mill_footer_contact_url', 'Contact Page', 'john_mill_footer_contact_callback', 'john_mill_theme_options', 'john_mill_social_links');
-    register_setting('john_mill_theme_options_group', 'john_mill_footer_email');
+    register_setting('john_mill_theme_options_group', 'john_mill_footer_contact_url');
+
+    // Get Involved
+    add_settings_field('john_mill_footer_get_involved', 'Get Involved URL', 'john_mill_footer_getinvolved_callback', 'john_mill_theme_options', 'john_mill_social_links');
+    register_setting('john_mill_theme_options_group', 'john_mill_footer_get_involved');
 
     // Instagram
     add_settings_field('john_mill_footer_instagram', 'Instagram URL', 'john_mill_footer_instagram_callback', 'john_mill_theme_options', 'john_mill_social_links');
@@ -46,14 +50,14 @@ function john_mill_theme_settings() {
 add_action('admin_init', 'john_mill_theme_settings');
 
 // // Input Field Callbacks
-// function john_mill_footer_email_callback() {
-//     $email = get_option('john_mill_footer_email', 'groatsmill@gmail.com');
-//     echo '<input type="email" name="john_mill_footer_email" value="' . esc_attr($email) . '" class="regular-text">';
-// }
+function john_mill_footer_getinvolved_callback() {
+    $gilink = get_option('john_mill_footer_get_involved', '/contact');
+    echo '<input type="url" name="john_mill_footer_get_involved" value="' . esc_attr($gilink) . '" class="regular-text">';
+}
 // Input Field Callbacks
 function john_mill_footer_contact_callback() {
-    $email = get_option('john_mill_footer_contact_url', '/contact');
-    echo '<input type="url" name="john_mill_footer_email" value="' . esc_attr($email) . '" class="regular-text">';
+    $contact = get_option('john_mill_footer_contact_url', '/contact');
+    echo '<input type="url" name="john_mill_footer_contact_url" value="' . esc_attr($contact) . '" class="regular-text">';
 }
 function john_mill_footer_instagram_callback() {
     $instagram = get_option('john_mill_footer_instagram', '');
@@ -64,3 +68,5 @@ function john_mill_footer_facebook_callback() {
     $facebook = get_option('john_mill_footer_facebook', '');
     echo '<input type="url" name="john_mill_footer_facebook" value="' . esc_attr($facebook) . '" class="regular-text">';
 }
+
+
