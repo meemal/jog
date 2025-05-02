@@ -172,7 +172,6 @@ $includes = [
     'inc/load-more.php',
     'inc/visit-us-meta-box.php',
     'inc/theme-option.php',
-    'inc/contact-meta-box.php',
 ];
 
 foreach ($includes as $file) {

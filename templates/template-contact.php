@@ -7,21 +7,19 @@ get_header();
 ?>
 
 
-<div class="container py-8 pt-[50px] sm:pt-[100px] text-center">
-    <!-- Dynamic Page Title -->
-    <h1 class="text-mill-red text-[40px] sm:text-[60px] font-artz lg:text-[82px]  mb-2"><?php the_title(); ?></h1>
+<div class=" pt-[130px] lg:pt-[230px]">
+    <div class="container">
+        <div class="w-auto lg:max-w-[1306px] mb-[74px] md:mb-[114px] text-center ssm:text-left">
+            <h1 class="text-mill-red font-artz text-[60px] lg:text-[120px] leading-[55px] mb-[65px] md:mb-[100px] "><?php the_title(); ?></h1>
+            <div class="text-mill-warm-grey font-artz text-[40px] lg:text-[42px]  leading-[40px] ">
 
-    <!-- Get Custom Meta Description (Show only if provided) -->
-    <?php 
-    $description = get_post_meta(get_the_ID(), '_contact_page_description', true);
-    if (!empty(trim($description))) : ?>
-        <p class="text-mill-warm-grey text-[20px] sm:text-[30px] lg:text-[32px] max-w-3xl mx-auto font-artz mb-6 leading-[20px] sm:leading-[30px] lg:leading-[35px]"><?php echo esc_html($description); ?></p>
-    <?php endif; ?>
-
-    <!-- Dynamic Page Content -->
-    <div class="text-gray-700 text-xl font-normal max-w-3xl mx-auto custom-line-height mb-8">
-        <?php the_content(); ?>
+                <?php the_excerpt();  ?>
+            </div>      
+            <div class="m-10">
+                <?= the_content() ?>
+            </div>
+        </div>
     </div>
-</div>
+ </div>
 
 <?php get_footer(); ?>

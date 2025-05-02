@@ -13,8 +13,11 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
         <h1 class=" text-mill-red font-artz text-[60px] md:text-[120px] leading-[55px] mb-[45px] md:mb-[100px] "><?php the_title(); ?></h1>
 
         <div class=" text-mill-warm-grey font-artz text-[40px] md:text-[42px] leading-[40px] max-w-[90rem] mb-[73px] lg:mb-[120px]">
-            <?php while (have_posts()) : the_post(); the_content(); endwhile; ?>
-        </div>
+        <?php while (have_posts()) : the_post(); the_excerpt(); endwhile; ?>
+            </div>
+            <div class="my-10">
+                <?= the_content() ?>
+            </div>
 
         <?php
         if (!empty($tabs) && is_array($tabs)) :

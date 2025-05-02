@@ -30,7 +30,20 @@ if (isset($what_3_words)){
         <div class="text-mill-warm-grey font-artz text-[25px] sm:text-[40px] lg:text-[42px] w-full lg:max-w-[1306px] leading-[30px] sm:leading-[40px]">
             <?php the_excerpt(); ?>
         </div>
+        <div>
         <?php the_content(); ?>
+        </div>
+        <div class="w-full lg:w-2/3 mx-auto mt-[40px] sm:mt-[60px]">
+        <?php
+        $form_shortcode = get_field('form_shortcode');
+     echo  $form_shortcode;
+        if (!empty($form_shortcode)) {
+         
+            echo do_shortcode($form_shortcode);
+      
+        }
+        ?>
+        </div>
     </div>
 
 
