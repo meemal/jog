@@ -580,6 +580,7 @@ video {
 
 h1:not([class]) {
   margin-bottom: 25px;
+  margin-top: 25px;
   font-family: "hwt-artz", sans-serif;
   font-size: 60px;
   line-height: 55px;
@@ -590,12 +591,15 @@ h1:not([class]) {
 @media (min-width: 1024px) {
   h1:not([class]) {
     margin-bottom: 80px;
+    margin-top: 80px;
     font-size: 120px;
     line-height: 95px;
   }
 }
 
 h2:not([class]) {
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: "hwt-artz", sans-serif;
   font-size: 3rem;
   line-height: 1;
@@ -604,6 +608,8 @@ h2:not([class]) {
 }
 
 h3:not([class]) {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 500;
@@ -613,6 +619,8 @@ h3:not([class]) {
 }
 
 h4:not([class]) {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 500;
@@ -622,6 +630,8 @@ h4:not([class]) {
 }
 
 h5:not([class]) {
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 500;
@@ -631,6 +641,10 @@ h5:not([class]) {
 }
 
 h6:not([class]) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 500;
   line-height: 1.5;
   --tw-text-opacity: 1;
@@ -674,6 +688,46 @@ a:not([class]):hover {
   background-color: rgb(164 200 225 / var(--tw-bg-opacity, 1));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+/* .button{
+        @apply inline-block bg-mill-red text-white text-[18px] lg:text-[22px] font-bold py-[15px] px-[30px] rounded-[5px] hover:bg-mill-red-light transition-colors duration-300;
+      }
+      p[experpt]{
+        @apply text-mill-warm-grey font-artz text-[40px] lg:text-[42px] leading-[40px] w-full lg:max-w-[1306px] mb-[20px] lg:mb-[80px];
+      } */
+
+.wp-caption-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 67 65 / var(--tw-bg-opacity, 1));
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.wp-caption {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 67 65 / var(--tw-bg-opacity, 1));
+}
+
+.wp-caption.alignright {
+  float: inline-end;
+}
+
+.wp-caption.alignleft {
+  float: inline-start;
 }
 
 .container {
@@ -934,8 +988,16 @@ a:not([class]):hover {
   margin-bottom: 100px;
 }
 
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+
 .mb-\[11px\] {
   margin-bottom: 11px;
+}
+
+.mb-\[15px\] {
+  margin-bottom: 15px;
 }
 
 .mb-\[200px\] {
@@ -1082,8 +1144,16 @@ a:not([class]):hover {
   margin-top: 11px;
 }
 
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
 .mt-\[20px\] {
   margin-top: 20px;
+}
+
+.mt-\[25px\] {
+  margin-top: 25px;
 }
 
 .mt-\[30px\] {
@@ -1108,6 +1178,10 @@ a:not([class]):hover {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -1376,6 +1450,10 @@ a:not([class]):hover {
   flex-wrap: wrap;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -1514,6 +1592,10 @@ a:not([class]):hover {
 
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b-\[30px\] {
@@ -1688,6 +1770,11 @@ a:not([class]):hover {
   background-color: rgb(104 153 191 / var(--tw-bg-opacity, 1));
 }
 
+.bg-mill-blue-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 200 225 / var(--tw-bg-opacity, 1));
+}
+
 .bg-mill-peach-light {
   --tw-bg-opacity: 1;
   background-color: rgb(226 197 209 / var(--tw-bg-opacity, 1));
@@ -1701,6 +1788,11 @@ a:not([class]):hover {
 .bg-mill-smoke-light {
   --tw-bg-opacity: 1;
   background-color: rgb(176 178 180 / var(--tw-bg-opacity, 1));
+}
+
+.bg-mill-warm-grey {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 67 65 / var(--tw-bg-opacity, 1));
 }
 
 .bg-red-500 {
@@ -1839,6 +1931,11 @@ a:not([class]):hover {
   padding-right: 23px;
 }
 
+.px-\[30px\] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .px-\[36px\] {
   padding-left: 36px;
   padding-right: 36px;
@@ -1897,6 +1994,11 @@ a:not([class]):hover {
 .py-\[100px\] {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .pb-0 {
@@ -2039,6 +2141,10 @@ a:not([class]):hover {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .font-artz {
   font-family: "hwt-artz", sans-serif;
 }
@@ -2161,6 +2267,10 @@ a:not([class]):hover {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.leading-\[1\] {
+  line-height: 1;
 }
 
 .leading-\[20px\] {
@@ -2607,6 +2717,10 @@ a:not([class]):hover {
 }
 
 @media (min-width: 500px) {
+  .ssm\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .ssm\:flex {
     display: flex;
   }
@@ -2618,9 +2732,17 @@ a:not([class]):hover {
   .ssm\:text-left {
     text-align: left;
   }
+
+  .ssm\:text-center {
+    text-align: center;
+  }
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
   .sm\:mb-\[40px\] {
     margin-bottom: 40px;
   }
@@ -2702,6 +2824,10 @@ a:not([class]):hover {
 
   .sm\:pt-\[100px\] {
     padding-top: 100px;
+  }
+
+  .sm\:text-center {
+    text-align: center;
   }
 
   .sm\:text-\[30px\] {
@@ -2860,6 +2986,10 @@ a:not([class]):hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[2fr\2c 1fr\] {
+    grid-template-columns: 2fr 1fr;
+  }
+
   .md\:flex-col {
     flex-direction: column;
   }
@@ -2999,6 +3129,10 @@ a:not([class]):hover {
     margin-top: 78px;
   }
 
+  .lg\:mt-\[80px\] {
+    margin-top: 80px;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -3081,6 +3215,10 @@ a:not([class]):hover {
 
   .lg\:gap-\[148px\] {
     gap: 148px;
+  }
+
+  .lg\:gap-\[60px\] {
+    gap: 60px;
   }
 
   .lg\:gap-\[73px\] {

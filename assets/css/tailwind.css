@@ -57,22 +57,22 @@
       } */
 
       h1:not([class]) {
-        @apply text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px];
+        @apply text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] mt-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px] lg:mt-[80px];
       }
       h2:not([class]) {
-        @apply text-5xl  text-mill-smoke font-artz;
+        @apply text-5xl text-mill-smoke font-artz mt-[20px] mb-[20px];
       }
       h3:not([class]) {
-        @apply text-4xl font-medium text-mill-smoke leading-normal;
+        @apply text-4xl font-medium text-mill-smoke leading-normal mt-[15px] mb-[15px];
       }
       h4:not([class]) {
-        @apply text-3xl font-medium text-mill-smoke leading-normal;
+        @apply text-3xl font-medium text-mill-smoke leading-normal mt-[15px] mb-[15px];
       }
       h5:not([class]) {
-        @apply text-2xl font-medium text-mill-smoke leading-normal;
+        @apply text-2xl font-medium text-mill-smoke leading-normal mt-[10px] mb-[10px];
       }
       h6:not([class]) {
-        @apply font-medium text-mill-smoke leading-normal;
+        @apply text-xl font-medium text-mill-smoke leading-normal mt-[10px] mb-[10px];
       }
     
       a:not([class]) {
@@ -87,6 +87,25 @@
       .tag-news{
         @apply border border-mill-blue-light px-2 rounded bg-mill-blue-light; 
       }
+      /* .button{
+        @apply inline-block bg-mill-red text-white text-[18px] lg:text-[22px] font-bold py-[15px] px-[30px] rounded-[5px] hover:bg-mill-red-light transition-colors duration-300;
+      }
+      p[experpt]{
+        @apply text-mill-warm-grey font-artz text-[40px] lg:text-[42px] leading-[40px] w-full lg:max-w-[1306px] mb-[20px] lg:mb-[80px];
+      } */
+
+       .wp-caption-text{
+        @apply text-[18px] font-normal leading-[30px] text-center mt-[10px] mb-[10px] bg-mill-warm-grey text-white rounded-b-lg;
+       }
+       .wp-caption {
+        @apply bg-mill-warm-grey rounded-xl mx-auto max-w-max;
+       }
+       .wp-caption.alignright{
+        @apply float-end;
+       }
+       .wp-caption.alignleft{
+        @apply float-start;
+       }
 }
 
 

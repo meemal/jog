@@ -120,10 +120,10 @@
                         </p>
                     </div>
                 </div> -->
-                
+               
                 <div class="space-y-2 lg:block">
                     <div class="text-left text-[22px] leading-[34px] font-artz text-mill-smoke-light">
-                        <p class="mb-2">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
+                        <p class="mb-2 leading-[1]">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
                         <p class="text-left font-artz">
                             <?php
                             $contact_url = get_contact_page_url_by_template_name();

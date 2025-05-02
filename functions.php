@@ -201,4 +201,14 @@ function custom_enqueue_typekit_fonts() {
 }
 add_action('wp_enqueue_scripts', 'custom_enqueue_typekit_fonts');
 
+
+// =============================================
+// Enable saving of JSON files for ACF
+// =============================================
+
+function my_acf_json_save_point( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
+}
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
 ?>

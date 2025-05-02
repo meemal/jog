@@ -48,7 +48,21 @@
 
     <section>
         <div class="text-center ssm:text-left container pt-[71px] md:pt-[105px]">
-            <h1 class="text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px]"><?php the_title(); ?></h1>
+            <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-[30px] lg:gap-[60px] ">
+                <div>
+                    <h1 class="text-mill-red font-artz text-[60px] lg:text-[120px] mb-[25px] leading-[55px] lg:leading-[95px] lg:mb-[80px]"><?php the_title(); ?></h1>
+                </div>
+                <div class="items-end text-right sm:text-center ssm:text-center sm:mb-10 ssm:mb-6">
+                    <?php 
+                    $event_booking_link = get_post_meta(get_the_ID(), 'event_booking_link', true); 
+                    if ($event_booking_link) : 
+                    ?>
+                        <a href="<?php echo esc_url($event_booking_link); ?>" class="inline-block bg-mill-red text-white text-[18px] lg:text-[22px] font-bold py-[15px] px-[30px] rounded-[5px] hover:bg-mill-red-light transition-colors duration-300">
+                            Book <?= get_the_title() ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
 
             <?php if (has_excerpt()) : ?>
                 <p class="text-mill-warm-grey font-artz text-[40px] lg:text-[42px] leading-[40px] w-full lg:max-w-[1306px] mb-[20px] lg:mb-[80px] ">
@@ -78,9 +92,18 @@
             </div>
         <?php endif; ?>
     </section>
-
-
-
+    <?php 
+                    $event_booking_link = get_post_meta(get_the_ID(), 'event_booking_link', true); 
+                    if ($event_booking_link) : 
+                    ?>
+    <div class="text-center sm:mb-10 ssm:mb-6">
+                    
+                        <a href="<?php echo esc_url($event_booking_link); ?>" class="inline-block bg-mill-red text-white text-[18px] lg:text-[22px] font-bold py-[15px] px-[30px] rounded-[5px] hover:bg-mill-red-light transition-colors duration-300">
+                            Book <?= get_the_title() ?>
+                        </a>
+                   
+                </div>
+                <?php endif; ?>
     <!-- Share Section -->
     <section class=" mb-[100px] lg:mb-[200px] container mt-[55px] lg:mt-[78px]">
         <h3 class="text-mill-warm-grey font-artz text-[42px] ">Share</h3>
@@ -275,7 +298,7 @@
                 <div>
                     <p class="text-[22px] font-normal text-mill-warm-grey mb-2">Next</p>
                     <h2 class="text-[40px] hover:text-mill-red duration-200 sm:text-[60px] font-artz leading-[35px] sm:leading-[55px] text-dark-grey">
-                        <a href="<?php echo get_permalink($prev_post->ID); ?>">
+                        <a class="prev-btn" href="<?php echo get_permalink($prev_post->ID); ?>">
                             <?php echo get_the_title($prev_post->ID); ?>
                         </a>
                     </h2>
