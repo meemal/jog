@@ -101,10 +101,10 @@
         @apply bg-mill-warm-grey rounded-xl mx-auto max-w-max;
        }
        .wp-caption.alignright{
-        @apply float-end;
+        @apply float-end ml-5;
        }
        .wp-caption.alignleft{
-        @apply float-start;
+        @apply float-start mr-5
        }
 }
 

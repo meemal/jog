@@ -724,10 +724,12 @@ a:not([class]):hover {
 
 .wp-caption.alignright {
   float: inline-end;
+  margin-left: 1.25rem;
 }
 
 .wp-caption.alignleft {
   float: inline-start;
+  margin-right: 1.25rem;
 }
 
 .container {
@@ -931,6 +933,14 @@ a:not([class]):hover {
   order: 2;
 }
 
+.float-start {
+  float: inline-start;
+}
+
+.float-end {
+  float: inline-end;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -1086,6 +1096,10 @@ a:not([class]):hover {
   margin-right: 0.5rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mr-8 {
   margin-right: 2rem;
 }
@@ -1178,6 +1192,10 @@ a:not([class]):hover {
   margin-top: 32px;
 }
 
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
 .mt-\[55px\] {
   margin-top: 55px;
 }
@@ -1188,10 +1206,6 @@ a:not([class]):hover {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-\[40px\] {
-  margin-top: 40px;
 }
 
 .block {
@@ -2073,6 +2087,10 @@ a:not([class]):hover {
   padding-left: 53px;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
 .pr-\[63px\] {
   padding-right: 63px;
 }
@@ -2119,10 +2137,6 @@ a:not([class]):hover {
 
 .pt-\[4rem\] {
   padding-top: 4rem;
-}
-
-.pt-\[50px\] {
-  padding-top: 50px;
 }
 
 .pt-\[54px\] {
@@ -2210,10 +2224,6 @@ a:not([class]):hover {
   font-size: 18px;
 }
 
-.text-\[20px\] {
-  font-size: 20px;
-}
-
 .text-\[22px\] {
   font-size: 22px;
 }
@@ -2287,10 +2297,6 @@ a:not([class]):hover {
 
 .leading-\[1\] {
   line-height: 1;
-}
-
-.leading-\[20px\] {
-  line-height: 20px;
 }
 
 .leading-\[21px\] {
@@ -2845,10 +2851,6 @@ a:not([class]):hover {
     text-align: center;
   }
 
-  .sm\:text-\[30px\] {
-    font-size: 30px;
-  }
-
   .sm\:text-\[32px\] {
     font-size: 32px;
   }
@@ -2863,10 +2865,6 @@ a:not([class]):hover {
 
   .sm\:text-\[60px\] {
     font-size: 60px;
-  }
-
-  .sm\:leading-\[30px\] {
-    line-height: 30px;
   }
 
   .sm\:leading-\[40px\] {
@@ -3184,12 +3182,12 @@ a:not([class]):hover {
     max-height: 750px;
   }
 
-  .lg\:w-auto {
-    width: auto;
-  }
-
   .lg\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:max-w-\[1280px\] {
@@ -3330,24 +3328,12 @@ a:not([class]):hover {
     font-size: 28px;
   }
 
-  .lg\:text-\[32px\] {
-    font-size: 32px;
-  }
-
   .lg\:text-\[42px\] {
     font-size: 42px;
   }
 
   .lg\:text-\[60px\] {
     font-size: 60px;
-  }
-
-  .lg\:text-\[82px\] {
-    font-size: 82px;
-  }
-
-  .lg\:leading-\[35px\] {
-    line-height: 35px;
   }
 
   .lg\:leading-\[38px\] {
