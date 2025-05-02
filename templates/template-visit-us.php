@@ -33,17 +33,7 @@ if (isset($what_3_words)){
         <div>
         <?php the_content(); ?>
         </div>
-        <div class="w-full lg:w-2/3 mx-auto mt-[40px] sm:mt-[60px]">
-        <?php
-        $form_shortcode = get_field('form_shortcode');
-     echo  $form_shortcode;
-        if (!empty($form_shortcode)) {
-         
-            echo do_shortcode($form_shortcode);
       
-        }
-        ?>
-        </div>
     </div>
 
 

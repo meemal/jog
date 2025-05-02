@@ -16,9 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "[formidable id=3]",
+            "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -42,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746181436
+    "modified": 1746182001
 }
