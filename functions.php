@@ -221,4 +221,11 @@ function add_excerpt_to_pages() {
 add_action('init', 'add_excerpt_to_pages');
 
 
-?>
+
+function add_cookieyes_script() {
+    ?>
+  <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/1f47fe85181ddda3634993ea/script.js"></script> <!-- End cookieyes banner -->
+    <?php
+}
+add_action('wp_head', 'add_cookieyes_script');
+
