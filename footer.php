@@ -1,6 +1,9 @@
 <!-- Footer -->
-<?php $get_involved_url  = get_option('john_mill_footer_get_involved', '');?>
-<?php $contact_url  = get_option('john_mill_footer_contact_url', '');?>
+<?php $get_involved_url  = get_field('john_mill_footer_get_involved', 'options');?>
+<?php $contact_url  = get_field('john_mill_footer_contact_url', 'options');?>
+<?php $donateurl  = get_field('donate_button_link', 'options');?>
+<?php $showdonate  = get_field('show_donate_in_footer', 'options');?>
+<?php $charityinfo  = get_field('charity_information', 'options');?>
 
 <!-- Only show this section if a link exists -->
 <?php if (!empty($get_involved_url)) : ?>
@@ -46,7 +49,7 @@
 
                             <div class="space-y-2">
                                 <div class="w-[346px] text-left font-artz text-gray-400 text-[28px] leading-[27px]">
-                                    <p>THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
+                                    <p><?= $charityinfo ?></p>
                                     <p class="text-left mt-1 font-artz">
                                         
                                         <?php if ($contact_url) : ?>
@@ -55,6 +58,12 @@
                                             </a>
                                         <?php endif; ?>
                                     
+                                        <?php if ($donateurl && $showdonate) :?>
+                                            <p class="mt-4"><a href="<?php echo esc_url($donateurl); ?>" target="_blank" class="inilne-block mt-4 border font-brother font-bold text-[#FFFFFF] bg-mill-blue hover:bg-mill-blue-light px-6 py-3 rounded-lg text-[18px] transition-all duration-300 mv-2">
+                                                Donate
+                                            </a></p>
+                                        
+                                        <?php endif; ?>
                                     </p>
                                 </div>
                             </div>
@@ -124,14 +133,19 @@
                
                 <div class="space-y-2 lg:block">
                     <div class="text-left text-[22px] leading-[34px] font-artz text-mill-smoke-light">
-                        <p class="mb-2 leading-[1]">THE JOHN O'GROATS MILL TRUST IS A NOT-FOR-PROFIT ORGANISATION</p>
+                        <p class="mb-2 leading-[1]"><?= $charityinfo ?></p>
                         <p class="text-left font-artz">
                          
                             <?php if ($contact_url) : ?>
-                                <a href="<?php echo esc_url($contact_url ); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:text-mill-red-high">
+                                <p><a href="<?php echo esc_url($contact_url ); ?>" title="Contact John O Groat Mill"  class="text-mill-red hover:text-mill-red-high">
                                                 Contact Us
-                                           
-                                </a>
+                                            </a></p>
+                            <?php endif; ?>
+                             <?php if ($donateurl && $showdonate) :?>
+                                <p class="mt-4"><a href="<?php echo esc_url($donateurl); ?>" target="_blank" class="inilne-block mt-4 border font-brother font-bold text-[#FFFFFF] bg-mill-blue hover:bg-mill-blue-light px-6 py-3 rounded-lg text-[18px] transition-all duration-300 mv-2">
+                                    Donate
+                                </a></p>
+
                             <?php endif; ?>
                         </p>
                     </div>

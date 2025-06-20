@@ -1,0 +1,156 @@
+{
+    "key": "group_685471e8a5731",
+    "title": "Footer Area Options",
+    "fields": [
+        {
+            "key": "field_685471e979eea",
+            "label": "Charity Information",
+            "name": "charity_information",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "John O'Groats Mill Trust is a charity registered in Scotland, Charity Number SC047345)",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68553c45b344e",
+            "label": "Show Donate Button Seperately In Footer",
+            "name": "show_donate_in_footer",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6854722479eeb",
+            "label": "Donate Button Link",
+            "name": "donate_button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_68553005328e5",
+            "label": "Get Involved URL",
+            "name": "john_mill_footer_get_involved",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "\/contact-us\/",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_68553511f395a",
+            "label": "Contact",
+            "name": "john_mill_footer_contact_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "\/contact-us\/",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_68553511f3959",
+            "label": "Instagram",
+            "name": "john_mill_footer_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.instagram.com\/john_o_groats_mill\/",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_68553510f3958",
+            "label": "Facebook",
+            "name": "john_mill_footer_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.facebook.com\/johnogroatsmill",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "jog-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1750416549
+}

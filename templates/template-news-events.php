@@ -3,7 +3,8 @@
 Template Name: News and Events
 */
 get_header();
-$get_involved_url = get_post_meta(get_the_ID(), '_get_involved_url', true);
+ $get_involved_url  = get_field('john_mill_footer_get_involved', 'options');
+
 ?>
 
 <!-- Page Header -->
