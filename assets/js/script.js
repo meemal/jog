@@ -61,12 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        nextButton.addEventListener("click", function (event) {
-            event.preventDefault();
-            let currentTabIndex = Array.from(tabButtons).findIndex(button => button.classList.contains("text-mill-red"));
-            let nextTabIndex = (currentTabIndex + 1) % tabButtons.length;
-            activateTab(tabButtons[nextTabIndex].dataset.tab);
-        });
+nextButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    let currentTabIndex = Array.from(tabButtons).findIndex(button => button.classList.contains("text-mill-red"));
+    let nextTabIndex = (currentTabIndex + 1) % tabButtons.length;
+    activateTab(tabButtons[nextTabIndex].dataset.tab);
+
+    // Scroll to top of tab section
+    const tabAnchor = document.getElementById("tab-section");
+    if (tabAnchor) {
+        tabAnchor.scrollIntoView({ behavior: "smooth" });
+    }
+});
+
 
         const firstActiveTab = document.querySelector(".tab-button[data-initial-tab='true']");
         if (firstActiveTab) {

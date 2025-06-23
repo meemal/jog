@@ -45,6 +45,15 @@ function johnmill_enqueue_assets() {
         true
     );
 
+    if (is_page_template('template-tabbed-content-page.php')) {
+        wp_enqueue_script(
+            'tabbed-content-js',
+            get_stylesheet_directory_uri() . '/assets/js/tabbed-content.js',
+            [],
+            $theme_version,
+            true
+        );
+    }
     wp_localize_script('custom-js', 'news_ajax', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
