@@ -1,11 +1,9 @@
 <?php
 /*
-Template Name: Journey Page
+Template Name: Tabbed Content Page
 */
 get_header();
 $page_id = get_the_ID();
-$tabs = get_post_meta($page_id, 'journey_tabs', true); // Fetch tabs from meta
-$first_tab_key = array_key_first($tabs); // Get first tab key dynamically
 ?>
 
 <main class="bg-warm-oatmeal-light pt-[135px] lg:pt-[225px] pb-[94px] lg:pb-[290px]">
@@ -13,11 +11,11 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
         <h1 class=" text-mill-red font-artz text-[60px] md:text-[120px] leading-[55px] mb-[45px] md:mb-[100px] "><?php the_title(); ?></h1>
 
         <div class=" text-mill-warm-grey font-artz text-[40px] md:text-[42px] leading-[40px] max-w-[90rem] mb-[73px] lg:mb-[120px]">
-            <?php while (have_posts()) : the_post(); the_excerpt(); endwhile; ?>
+            <?php if (have_posts()) : the_post(); the_excerpt(); endif; ?>
         </div>
 
         <div class="my-10">
-            <?= the_content(); ?>
+            <?php the_content(); ?>
         </div>
 
         <?php if (have_rows('tabbed_content')) :
@@ -65,10 +63,10 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
                         $tab_image_alt = $tab['image']['alt'] ?? $tab['name'];
                     ?>
                         <div id="<?php echo esc_attr($tab['id']); ?>" 
-                            class="grid lg:grid-cols-2 gap-0 sm:gap-[51px] lg:gap-[73px] tab-content <?php echo ($tab['id'] === $first_tab_id) ? '' : 'hidden'; ?>">
+                             class="grid lg:grid-cols-2 gap-0 sm:gap-[51px] lg:gap-[73px] tab-content <?php echo ($tab['id'] === $first_tab_id) ? '' : 'hidden'; ?>">
 
                             <!-- Content First on Mobile, Second on Desktop -->
-                            <div class="space-y-6 text-[22px] max-h-full lg:max-h-[750px] lg:overflow-auto leading-[32px] lg:text-[28px] lg:leading-[38px] text-dark-grey  font-brother font-normal  order-1 lg:order-2 mt-[-27px]">
+                            <div class="space-y-6 text-[22px] max-h-full lg:max-h-[750px] lg:overflow-auto leading-[32px] lg:text-[28px] lg:leading-[38px] text-dark-grey font-brother font-normal order-1 lg:order-2 mt-[-27px]">
                                 <p><?php echo wp_kses_post($tab['content']); ?></p>
                             </div>
 
@@ -76,11 +74,10 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
                             <div class="order-2 lg:order-1">
                                 <?php if (!empty($tab_image_url)) : ?>
                                     <img src="<?php echo esc_url($tab_image_url); ?>" 
-                                        alt="<?php echo esc_attr($tab_image_alt); ?>" 
-                                        class="w-full h-auto sm:h-[544px] lg:h-[685px] rounded-[30px] object-fill sm:object-cover">
+                                         alt="<?php echo esc_attr($tab_image_alt); ?>" 
+                                         class="w-full h-auto sm:h-[544px] lg:h-[685px] rounded-[30px] object-fill sm:object-cover">
                                 <?php endif; ?>
                             </div>
-
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -101,25 +98,21 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
                 });
                 </script>
 
-        <?php
-            else :
-                echo '<p class="text-gray-600">No tabbed content available.</p>';
-            endif;
-        endif;
-        ?>
-
+        <?php else : ?>
+            <p class="text-gray-600">No tabbed content available.</p>
+        <?php endif; endif; ?>
     </div>
 </main>
 
 <section class="bg-[#FCF9F2] pt-[71px] pb-[70px] rounded-t-[30px]">
     <div class="container">
         <div class="flex justify-between items-center">
-            <div class="">
-                <p class=" font-normal text-[22px] text-mill-warm-grey">Next</p>
+            <div>
+                <p class="font-normal text-[22px] text-mill-warm-grey">Next</p>
                 <p class="text-[40px] sm:text-[60px] font-bold text-dark-grey font-artz hover:text-mill-red next-text">VISION</p>
             </div>
             <a href="#"
-                class="group w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] font-bold rounded-full border-[3px] border-gray-500 flex items-center justify-center mt-4 nextBtn">
+               class="group w-[40px] h-[40px] sm:w-[65px] sm:h-[65px] font-bold rounded-full border-[3px] border-gray-500 flex items-center justify-center mt-4 nextBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" class="w-full h-full">
                     <g transform="translate(-1793 -2835)">
                         <circle cx="32.5" cy="32.5" r="32.5" transform="translate(1793 2835)"
@@ -135,6 +128,5 @@ $first_tab_key = array_key_first($tabs); // Get first tab key dynamically
         </div>
     </div>
 </section>
-
 
 <?php get_footer(); ?>
