@@ -12,33 +12,36 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-        static $menu_index = 0;
-        static $menu_items_count = null;
+    static $menu_index = 0;
+    static $menu_items_count = null;
 
-        if ($menu_items_count === null && isset($args->menu->term_id)) {
-            $menu_obj = wp_get_nav_menu_items($args->menu->term_id);
-            $menu_items_count = count($menu_obj);
-        }
-
-        $menu_index++;
-
-        $indent = ($depth) ? str_repeat("\t", $depth) : '';
-        
-        // Check if this menu item is the currently active page
-        $active_class = in_array('current-menu-item', (array) $item->classes) || in_array('current_page_parent', (array) $item->classes) ? ' text-red-800' : '';
-
-        $border_class = ($depth === 0 && $menu_index < $menu_items_count) ? "border-r-[4px] rounded-sm border-[#ddd]" : "";
-
-        if ($depth === 0) {
-            $output .= "$indent<li class=\"relative group py-5\">
-                            <a href=\"" . esc_attr($item->url) . "\" 
-                               class=\"px-[18px]  $border_class hover:text-red-800 group-hover:text-red-800$active_class\">" . esc_html($item->title) . "</a>";
-        } else {
-            $output .= "$indent<li>
-                            <a class=\"py-2 px-2 block hover:text-red-800$active_class\" 
-                               href=\"" . esc_attr($item->url) . "\">" . esc_html($item->title) . "</a>";
-        }
+    if ($menu_items_count === null && isset($args->menu->term_id)) {
+        $menu_obj = wp_get_nav_menu_items($args->menu->term_id);
+        $menu_items_count = count($menu_obj);
     }
+
+    $menu_index++;
+
+    $indent = ($depth) ? str_repeat("\t", $depth) : '';
+
+    $active_class = in_array('current-menu-item', (array) $item->classes) || in_array('current_page_parent', (array) $item->classes) ? ' text-red-800' : '';
+    $border_class = ($depth === 0 && $menu_index < $menu_items_count) ? "border-r-[4px] rounded-sm border-[#ddd]" : "";
+
+    // Handle new tab links
+    $target = !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+    $rel = ($item->target === '_blank') ? ' rel="noopener noreferrer"' : '';
+
+    if ($depth === 0) {
+        $output .= "$indent<li class=\"relative group py-5\">
+                        <a href=\"" . esc_url($item->url) . "\"$target$rel 
+                           class=\"px-[18px] $border_class hover:text-red-800 group-hover:text-red-800$active_class\">" . esc_html($item->title) . "</a>";
+    } else {
+        $output .= "$indent<li>
+                        <a href=\"" . esc_url($item->url) . "\"$target$rel 
+                           class=\"py-2 px-2 block hover:text-red-800$active_class\">" . esc_html($item->title) . "</a>";
+    }
+}
+
 
     function end_el(&$output, $item, $depth = 0, $args = null) {
         $output .= "</li>\n";

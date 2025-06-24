@@ -238,3 +238,10 @@ function add_cookieyes_script() {
 add_action('wp_head', 'add_cookieyes_script');
 
 
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
+    if (!empty($item->target) && $item->target === '_blank') {
+        $atts['target'] = '_blank';
+        $atts['rel'] = 'noopener noreferrer';
+    }
+    return $atts;
+}, 10, 4);
