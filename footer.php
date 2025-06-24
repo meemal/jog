@@ -72,8 +72,9 @@
                             <!-- Social Icons -->
                             <div class="flex justify-start items-start gap-3 mt-[32px] mb-[20px]">
                                 <?php 
-                                $instagram = get_option('john_mill_footer_instagram', '');
-                                $facebook  = get_option('john_mill_footer_facebook', '');
+                                $instagram = get_field('john_mill_footer_instagram', 'options');
+                                echo "DL:KAGJ GJFds". $instagram;
+                                $facebook  = get_field('john_mill_footer_facebook', 'options');
                                 ?>
 
                                 <?php if (!empty($instagram)) : ?>

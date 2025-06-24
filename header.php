@@ -77,7 +77,7 @@
 
 
         <!-- Mobile Menu -->
-        <div class="bg-[#B81E26] text-white h-[100vh] fixed top-0 bottom-0 left-0 right-0 -translate-x-full transition-all duration-600 opacity-0" id="mobileMenu">
+        <div class="bg-mill-red-high text-white h-[100vh] fixed top-0 bottom-0 left-0 right-0 -translate-x-full transition-all duration-600 opacity-0" id="mobileMenu">
             <div class="flex justify-between items-center container py-5">
                 <div class="flex-shrink-0">
                     <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -114,27 +114,30 @@
                     'items_wrap'     => '%3$s', // Ensures proper list structure
                     'fallback_cb'    => false,
                     'walker'         => new class extends Walker_Nav_Menu {
-                        function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-                            if ($depth === 0) { // Only display top-level menu items
-                                $output .= '<li class="border-t border-[#FFFFFF] last:border-b">'; // Applies border to all items
-                                $output .= '<a href="' . esc_url($item->url) . '" class="hover:text-black transition-all duration-500 py-4 px-5 text-[30px] text-[#FFFFFF] flex  justify-between items-center font-artz">';
+                       function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+                            if ($depth === 0) {
+                                $target = !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+                                $rel = !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
+
+                                $output .= '<li class="border-t border-[#FFFFFF] last:border-b">';
+                                $output .= '<a href="' . esc_url($item->url) . '"' . $target . $rel . ' class="hover:text-black transition-all duration-500 py-4 px-5 text-[30px] text-[#FFFFFF] flex justify-between items-center font-artz">';
                                 $output .= esc_html($item->title);
 
-                                // Add arrow icon
                                 $output .= '<span class="ml-auto"> 
-                                <div class="bg-gray-900/20 rounded-full p-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                                        <g id="Group_52" data-name="Group 52" transform="translate(48 48) rotate(180)">
-                                            <path id="Path_37" data-name="Path 37" d="M0,0H48V48H0Z" fill="none"/>
-                                            <path id="Path_38" data-name="Path 38" d="M40,22H15.66L26.83,10.83,24,8,8,24,24,40l2.83-2.83L15.66,26H40Z" fill="#fff"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                                            </span>';
+                                    <div class="bg-gray-900/20 rounded-full p-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                            <g transform="translate(48 48) rotate(180)">
+                                                <path d="M0,0H48V48H0Z" fill="none"/>
+                                                <path d="M40,22H15.66L26.83,10.83,24,8,8,24,24,40l2.83-2.83L15.66,26H40Z" fill="#fff"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </span>';
 
                                 $output .= '</a></li>';
                             }
                         }
+
                     }
                 ));
                 ?>
