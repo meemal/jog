@@ -38,58 +38,7 @@ if (isset($what_3_words)){
 
 
 
-    <!-- Map Section -->
-    <div class=" w-full h-[518px] lg:h-[1152px] relative mb-[200px] sm:mb-[782.6px] lg:mb-[350px]">
-        <div class="px-4 sm:container mt-[20px] sm:mt-[40px] mb-[20px] sm:mb-[50px]">
-            <?php if (!empty($final_link)) { ?>
-                <div class="px-4 sm:container mt-[20px] sm:mt-[40px] mb-[20px] sm:mb-[50px]">
-            
-               
-            <a href="<?php echo esc_url($what_3_words_link); ?>" target="_blank"
-            class="text-mill-red font-artz text-[30px] sm:text-[42px] hover:underline transition-all duration-300">
-                <?php echo esc_html($what_3_words); ?> 
-            </a>
 
-
-
-
-
-    </div>
-            <?php }; ?>
-        </div>
-
-
-        <div class="px-4 sm:px-[43px] md:px-[20px]">
-            <iframe
-                class="rounded-[40px] overflow-hidden w-full"
-                src="<?php echo esc_url(get_post_meta(get_the_ID(), 'visit_us_map', true)); ?>"
-                style="
-                    border: 0;
-                    height: 518px;
-                "
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-
-            <!-- <iframe
-                class="rounded-[40px] overflow-hidden "
-                src="<?php //echo esc_url(get_post_meta(get_the_ID(), 'visit_us_map', true)); ?>"
-                width="100%"
-                height="1152"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe> -->
-        </div>
-    </div>
-
-    <style>
-        @media (min-width: 1024px) {
-            iframe {
-            height: 1152px !important;
-            }
-        }
-    </style>
 
 </section>
 

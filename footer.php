@@ -146,8 +146,20 @@
                                 <p class="mt-4"><a href="<?php echo esc_url($donateurl); ?>" target="_blank" class="inilne-block mt-4 border font-brother font-bold text-[#FFFFFF] bg-mill-blue hover:bg-mill-blue-light px-6 py-3 rounded-lg text-[18px] transition-all duration-300 mv-2">
                                     Donate
                                 </a></p>
-
                             <?php endif; ?>
+                            <?php
+                            // echo "HERE";
+                            // if (has_nav_menu('footer-2')) {
+                            //     $menu_items = wp_get_nav_menu_items(get_nav_menu_locations()['footer-2']);
+                            //     if ($menu_items) {
+                            //         echo '<div class="mt-6">';
+                            //         foreach ($menu_items as $menu_item) {
+                            //             echo '<a href="' . esc_url($menu_item->url) . '" class="block text-[20px] text-mill-smoke-light leading-[27px] hover:text-mill-red mb-2">' . esc_html($menu_item->title) . '</a>';
+                            //         }
+                            //         echo '</div>';
+                            //     }
+                            // }
+                            ?>
                         </p>
                     </div>
                 </div>

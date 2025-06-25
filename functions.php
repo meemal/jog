@@ -174,9 +174,9 @@ add_action('template_redirect', 'redirect_invalid_search_results');
 // =============================================
 $includes = [
     'inc/menu.php',
-    'inc/customizer.php',
+    // 'inc/customizer.php',
     'inc/home-meta-box.php',
-    'inc/journey-meta-box.php',
+    // 'inc/journey-meta-box.php',
     'inc/load-more.php',
     // 'inc/visit-us-meta-box.php',
     'inc/theme-option.php',
@@ -236,12 +236,3 @@ function add_cookieyes_script() {
     <?php
 }
 add_action('wp_head', 'add_cookieyes_script');
-
-
-add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
-    if (!empty($item->target) && $item->target === '_blank') {
-        $atts['target'] = '_blank';
-        $atts['rel'] = 'noopener noreferrer';
-    }
-    return $atts;
-}, 10, 4);

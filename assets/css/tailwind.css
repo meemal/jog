@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+ .tab-content img{
+    @apply w-full h-auto sm:h-[600px] lg:h-[600px] rounded-[30px] object-cover mt-5;
+  }
+ .tab-content .content p:first-of-type {
+  @apply font-bold;
+}
+    
+.tab-content ul {
+  @apply list-disc pl-6 ml-4 space-y-2;
+}
+.tab-content ul li::marker {
+  color: #A4C8E1; /* Replace with your desired color */
+}
+
+  .tab-content ol {
+    @apply list-decimal pl-6 space-y-2;
+  }
+
+  .tab-content li {
+    @apply mb-1;
+  }
+
+  .tab-content a{
+    @apply text-[28px] font-bold underline text-mill-blue;
+  } 
+ .tab-content a:hover{
+    @apply text-[28px] font-bold no-underline text-mill-blue;
+  } 
+
+/* WYSIWYG-safe Tailwind styles */
+.tab-content .content img {
+  @apply w-full h-auto sm:h-[600px] lg:h-[600px] rounded-[30px] object-cover mt-5;
+}
+
+.tab-content .content p:first-of-type {
+  @apply font-bold;
+}
+.tab-content h3{
+  @apply  font-artz;
+}
+
 /* Custom CSS */
 @layer components {
     .custom-btn {
@@ -134,28 +175,4 @@
 
   
 }
-
-@layer components {
-.tab-content .content p:first-of-type
-{
-  @apply font-bold;
-}
-  .tab-content ul {
-    @apply list-disc pl-6 space-y-2 marker:text-mill-light;
-  }
-
-  .tab-content ol {
-    @apply list-decimal pl-6 space-y-2;
-  }
-
-  .tab-content li {
-    @apply mb-1;
-  }
-
-  .tab-content a{
-    @apply text-[28px] font-bold underline text-mill-blue;
-  }
-
-}
-
-
+  
