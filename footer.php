@@ -148,17 +148,23 @@
                                 </a></p>
                             <?php endif; ?>
                             <?php
-                            // echo "HERE";
-                            // if (has_nav_menu('footer-2')) {
-                            //     $menu_items = wp_get_nav_menu_items(get_nav_menu_locations()['footer-2']);
-                            //     if ($menu_items) {
-                            //         echo '<div class="mt-6">';
-                            //         foreach ($menu_items as $menu_item) {
-                            //             echo '<a href="' . esc_url($menu_item->url) . '" class="block text-[20px] text-mill-smoke-light leading-[27px] hover:text-mill-red mb-2">' . esc_html($menu_item->title) . '</a>';
-                            //         }
-                            //         echo '</div>';
-                            //     }
-                            // }
+                     
+                            if (has_nav_menu('footer-2')) {
+                      
+                                $menu_items = wp_get_nav_menu_items(get_nav_menu_locations()['footer-2']);
+                                if ($menu_items) {
+                                    echo '<div class="mt-6 flex flex-row items-center gap-2 ">';
+                                    $total = count($menu_items);
+                                    foreach ($menu_items as $index => $menu_item) {
+                                        echo '<a href="' . esc_url($menu_item->url) . '" class=" text-[16px] text-mill-smoke-light leading-[27px] hover:text-mill-red">' . esc_html($menu_item->title) . '</a>';
+                                        // Add delimiter except after last item
+                                        if ($index < $total - 1) {
+                                            echo '<span class="mx-2 text-mill-smoke-light">|</span>';
+                                        }
+                                    }
+                                    echo '</div>';
+                                }
+                            }
                             ?>
                         </p>
                     </div>

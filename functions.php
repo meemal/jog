@@ -78,6 +78,7 @@ function johnmill_theme_setup() {
     register_nav_menus([
         'primary' => __('Primary Menu', 'john-mill'),
         'footer'  => __('Footer Menu', 'john-mill'),
+        'footer-2'  => __('Footer Menu 2', 'john-mill'),
     ]);
 }
 add_action('after_setup_theme', 'johnmill_theme_setup');
